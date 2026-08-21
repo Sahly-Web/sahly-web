@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سهلي ويب | Sahly Web - سرعة • سهولة • احترافية</title>
+  <meta name="description" content="سهلي ويب (Sahly Web) - وكالتك الرقمية لتصميم وتطوير المتاجر والمواقع الإلكترونية ولوحات التحكم فائقة السرعة بأحدث التقنيات." />
+  <meta property="og:title" content="سهلي ويب | Sahly Web - سرعة • سهولة • احترافية" />
+  <meta property="og:description" content="وقف ضياع الوقت والفلوس.. المستقبل وصل مع سهلي ويب!" />
+  <meta name="theme-color" content="#050B14" />
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#0066FF',
+              cyan: '#00F0FF',
+              dark: '#050B14',
+              card: '#0B1528',
+              border: '#1E293B',
+              hover: '#0052CC'
+            }
+          },
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+            alexandria: ['Alexandria', 'sans-serif'],
+            jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Cairo', sans-serif; }
+    .font-alexandria { font-family: 'Alexandria', sans-serif; }
+    .font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+    
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #050B14; }
+    ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #0066FF; }
+
+    .glass-card {
+      background: rgba(11, 21, 40, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 102, 255, 0.2);
+    }
+    .glass-nav {
+      background: rgba(5, 11, 20, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0, 102, 255, 0.15);
+    }
+    .glow-blue { box-shadow: 0 0 35px rgba(0, 102, 255, 0.35); }
+    .glow-cyan { box-shadow: 0 0 25px rgba(0, 240, 255, 0.4); }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.05); }
+    }
+    .animate-pulse-glow { animation: pulseGlow 4s infinite ease-in-out; }
+  </style>
+</head>
+<body class="bg-[#050B14] text-slate-100 selection:bg-[#0066FF] selection:text-white antialiased overflow-x-hidden">
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="fixed top-5 left-5 z-[9999] flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- Global Header Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-3 group focus:outline-none">
+          <div class="relative w-11 h-11 rounded-2xl overflow-hidden shadow-[0_0_20px_rgba(0,102,255,0.5)] group-hover:shadow-[0_0_30px_rgba(0,240,255,0.7)] transition-all duration-300">
+            <img src="logo.png" alt="سهلي ويب" class="w-full h-full object-cover group-hover:scale-110 transition-transform" />
+          </div>
+          <div class="text-right">
+            <div class="flex items-center gap-1.5">
+              <span class="font-black text-2xl tracking-tight text-white font-alexandria">سهلي</span>
+              <span class="font-black text-2xl tracking-tight text-cyan-400 font-jakarta">Web</span>
+            </div>
+            <p class="text-[10px] text-slate-400 font-medium tracking-wide">سرعة • سهولة • احترافية</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+          <a href="#hero" class="hover:text-cyan-400 transition-colors">الرئيسية</a>
+          <a href="#services" class="hover:text-cyan-400 transition-colors">خدماتنا</a>
+          <a href="#packages" class="hover:text-cyan-400 transition-colors">الباقات والأسعار</a>
+          <a href="#calculator" class="hover:text-cyan-400 transition-colors">حاسبة التكلفة</a>
+          <a href="#why-us" class="hover:text-cyan-400 transition-colors">لماذا سهلي ويب؟</a>
+          <a href="#testimonials" class="hover:text-cyan-400 transition-colors">آراء العملاء</a>
+          <a href="#contact" class="hover:text-cyan-400 transition-colors">تواصل معنا</a>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a id="nav-whatsapp-link" href="https://wa.me/201500522825" target="_blank" class="px-4 py-2.5 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/40 text-xs font-bold transition-all flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>تواصل سريع</span>
+          </a>
+
+          <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-xs shadow-[0_0_20px_rgba(0,102,255,0.4)] transition-all flex items-center gap-2">
+            <span>اطلب موقعك الآن</span>
+            <i class="fa-solid fa-arrow-left text-[11px]"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 hover:text-white" aria-label="قائمة الموقع">
+          <i class="fa-solid fa-bars text-lg" id="mobile-menu-icon"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-drawer" class="hidden md:hidden bg-[#070F1E] border-b border-blue-900/50 px-6 py-6 space-y-4 text-right">
+      <a href="#hero" class="block text-slate-200 hover:text-cyan-400 font-semibold py-2" onclick="toggleMobileMenu()">الرئيسية</a>
+      <a href="#services" class="block text-slate-200 hover:text-cyan-400 font-semibold py-2" onclick="toggleMobileMenu()">خدماتنا</a>
+      <a href="#packages" class="block text-slate-200 hover:text-cyan-400 font-semibold py-2" onclick="toggleMobileMenu()">الباقات والأسعار</a>
+      <a href="#calculator" class="block text-slate-200 hover:text-cyan-400 font-semibold py-2" onclick="toggleMobileMenu()">حاسبة التكلفة</a>
+      <a href="#why-us" class="block text-slate-200 hover:text-cyan-400 font-semibold py-2" onclick="toggleMobileMenu()">لماذا سهلي ويب؟</a>
+      <a href="#testimonials" class="block text-slate-200 hover:text-cyan-400 font-semibold py-2" onclick="toggleMobileMenu()">آراء العملاء</a>
+      <a href="#contact" class="block text-slate-200 hover:text-cyan-400 font-semibold py-2" onclick="toggleMobileMenu()">تواصل معنا</a>
+      <div class="pt-4 border-t border-slate-800 flex flex-col gap-3">
+        <a href="#contact" class="w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-center text-sm shadow-md" onclick="toggleMobileMenu()">
+          اطلب موقعك الآن 🚀
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-blue-600/15 rounded-full blur-[140px] pointer-events-none animate-pulse-glow"></div>
+    <div class="absolute top-1/3 right-10 w-[350px] h-[350px] bg-cyan-400/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 text-center lg:text-right space-y-6">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-950/80 border border-blue-500/30 text-cyan-300 text-xs sm:text-sm font-semibold">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+            <span>وقف ضياع الوقت والفلوس.. المستقبل وصل مع سهلي ويب! 🚀</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-alexandria text-white leading-tight tracking-tight">
+            متجرك وموقعك الإلكتروني <br class="hidden sm:inline" />
+            بسرعة فائقة و <span class="bg-gradient-to-l from-cyan-400 via-blue-400 to-blue-600 bg-clip-text text-transparent">بدون اشتراكات شهرية</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            نطور لك مواقع ومتاجر إلكترونية ولوحات تحكم مخصصة تربط تلقائياً بقواعد بيانات سحابية مجانية ومدى الحياة، مع تجربة شراء فورية عبر واتساب وبوابات الدفع.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#packages" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-black text-base shadow-[0_0_30px_rgba(0,102,255,0.4)] hover:shadow-[0_0_40px_rgba(0,240,255,0.6)] transition-all flex items-center justify-center gap-3 group">
+              <span>تصفح الباقات والأسعار</span>
+              <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+            </a>
+
+            <a id="hero-whatsapp-btn" href="https://wa.me/201500522825?text=مرحباً%20سهلي%20ويب،%20أرغب%20في%20استشارة%20مجانية%20لمشروعي" target="_blank" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-700 hover:border-emerald-500/60 text-white font-bold text-base transition-all flex items-center justify-center gap-3">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+              <span>استشارة مجانية فورية</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-3 gap-3 pt-6 max-w-lg mx-auto lg:mx-0 border-t border-slate-800/80">
+            <div class="text-center lg:text-right">
+              <div class="text-xl sm:text-2xl font-black text-cyan-400 font-jakarta font-mono">100%</div>
+              <div class="text-xs text-slate-400 mt-0.5">بدون رسوم شهرية</div>
+            </div>
+            <div class="text-center lg:text-right">
+              <div class="text-xl sm:text-2xl font-black text-white font-jakarta font-mono">0.3s</div>
+              <div class="text-xs text-slate-400 mt-0.5">سرعة تحميل قياسية</div>
+            </div>
+            <div class="text-center lg:text-right">
+              <div class="text-xl sm:text-2xl font-black text-emerald-400 font-jakarta font-mono">24/7</div>
+              <div class="text-xs text-slate-400 mt-0.5">دعم فني واستشارات</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="relative rounded-3xl p-1 bg-gradient-to-b from-blue-500/40 via-blue-900/20 to-cyan-500/30 shadow-[0_0_50px_rgba(0,102,255,0.25)]">
+            <div class="rounded-[22px] bg-[#070E1C] p-6 sm:p-7 border border-blue-500/30 space-y-5">
+              <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                </div>
+                <div class="text-[11px] font-mono text-slate-400 bg-slate-900 px-3 py-1 rounded-md border border-slate-800 truncate">
+                  https://your-store.sahlyweb.com
+                </div>
+                <i class="fa-solid fa-lock text-[11px] text-emerald-400"></i>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div class="p-3.5 rounded-xl bg-slate-900/90 border border-blue-900/40">
+                  <span class="text-[11px] text-slate-400">مبيعات الأسبوع</span>
+                  <div class="text-lg font-black text-white font-mono mt-1">٣٤,٥٠٠ ج.م</div>
+                  <span class="text-[10px] text-emerald-400 font-bold flex items-center gap-1 mt-1">
+                    <i class="fa-solid fa-arrow-trend-up"></i> +42% نمو
+                  </span>
+                </div>
+                <div class="p-3.5 rounded-xl bg-slate-900/90 border border-blue-900/40">
+                  <span class="text-[11px] text-slate-400">طلبات الواتساب</span>
+                  <div class="text-lg font-black text-cyan-400 font-mono mt-1">128 طلب</div>
+                  <span class="text-[10px] text-cyan-300 font-bold flex items-center gap-1 mt-1">
+                    <i class="fa-solid fa-bolt"></i> إشعار مباشر
+                  </span>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-blue-950/40 border border-blue-500/20 space-y-2.5">
+                <div class="flex items-center justify-between text-xs font-bold text-white">
+                  <span>طلب مباشر جديد #8942</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">مكتمل التحويل</span>
+                </div>
+                <div class="text-xs text-slate-300">ساعة يد ذكية مقاومة للماء (الكمية: 2) • الإسكندرية</div>
+                <div class="flex items-center justify-between pt-2 border-t border-blue-900/40 text-xs">
+                  <span class="text-slate-400">القيمة: <strong class="text-white font-mono">1,700 ج.م</strong></span>
+                  <span class="text-emerald-400 font-bold flex items-center gap-1">
+                    <i class="fa-brands fa-whatsapp"></i> رسالة جاهزة للإرسال
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between text-xs text-slate-400 pt-1">
+                <span class="flex items-center gap-1.5 text-cyan-300">
+                  <i class="fa-solid fa-shield-halved text-cyan-400"></i> حماية واستقرار 99.9%
+                </span>
+                <span class="text-slate-500 font-mono text-[11px]">Next.js • Tailwind • Cloud</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="relative py-24 bg-[#070E1A]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950 border border-blue-500/30 text-cyan-300 text-xs font-bold mb-4 font-alexandria">
+          <i class="fa-solid fa-cubes text-cyan-400"></i>
+          <span>حلول برمجية متطورة</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-alexandria text-white tracking-tight mb-4">
+          خدمات <span class="bg-gradient-to-l from-cyan-400 to-blue-500 bg-clip-text text-transparent">سهلي ويب</span> الشاملة
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300">نقدم باقة متكاملة من الخدمات الرقمية لنقل نشاطك التجاري إلى قمة الاحترافية والمبيعات.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="rounded-3xl p-7 bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/60 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,102,255,0.2)] flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-blue-600/20 text-cyan-400 border border-blue-500/30 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <h3 class="text-xl font-bold font-alexandria text-white mb-3">تصميم المتاجر الإلكترونية</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">متاجر فائقة السرعة، متوافقة مع كل الأجهزة، طلب فوري بنقرة واحدة عبر واتساب أو بوابات دفع، وبدون أي عمولات أو اشتراكات شهرية.</p>
+            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> ربط بكسل فيسبوك وتيك توك</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> سلة شراء تفاعلية وسريعة</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> حساب تكلفة الشحن للمحافظات</li>
+            </ul>
+          </div>
+          <button onclick="selectServiceForContact('تصميم متجر إلكتروني')" class="w-full py-2.5 rounded-xl bg-blue-950 hover:bg-blue-600 text-cyan-300 hover:text-white border border-blue-800 font-bold text-xs transition-colors flex items-center justify-center gap-2">
+            <span>طلب الخدمة</span>
+            <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          </button>
+        </div>
+
+        <div class="rounded-3xl p-7 bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/60 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,102,255,0.2)] flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-cyan-600/20 text-cyan-300 border border-cyan-500/30 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-building"></i>
+            </div>
+            <h3 class="text-xl font-bold font-alexandria text-white mb-3">المواقع التعريفية والشركات</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">موقع تعريفي يعكس فخامة علامتك التجارية، ويعزز مصداقيتك أمام المستثمرين والعملاء بأحدث أساليب التصميم العالمي.</p>
+            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> تهيئة محركات البحث (SEO)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> استعراض سابقة الأعمال والخدمات</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> نماذج استفسار وحجز متقدمة</li>
+            </ul>
+          </div>
+          <button onclick="selectServiceForContact('موقع تعريفي للشركة')" class="w-full py-2.5 rounded-xl bg-blue-950 hover:bg-blue-600 text-cyan-300 hover:text-white border border-blue-800 font-bold text-xs transition-colors flex items-center justify-center gap-2">
+            <span>طلب الخدمة</span>
+            <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          </button>
+        </div>
+
+        <div class="rounded-3xl p-7 bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/60 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,102,255,0.2)] flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 class="text-xl font-bold font-alexandria text-white mb-3">لوحات التحكم والإدارة</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">لوحة تحكم مبسطة وسلسة باللغة العربية تمكنك من إضافة وتعديل المنتجات، متابعة الطلبات، وإدارة المخزون من هاتفك أو حاسوبك بسهولة.</p>
+            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> إدارة سهلة للمنتجات والأسعار</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> تقارير وإحصائيات المبيعات</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> صلاحيات مستخدمين متعددة</li>
+            </ul>
+          </div>
+          <button onclick="selectServiceForContact('لوحة تحكم وإدارة مخصصة')" class="w-full py-2.5 rounded-xl bg-blue-950 hover:bg-blue-600 text-cyan-300 hover:text-white border border-blue-800 font-bold text-xs transition-colors flex items-center justify-center gap-2">
+            <span>طلب الخدمة</span>
+            <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          </button>
+        </div>
+
+        <div class="rounded-3xl p-7 bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/60 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,102,255,0.2)] flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-purple-600/20 text-purple-400 border border-purple-500/30 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <h3 class="text-xl font-bold font-alexandria text-white mb-3">الهوية البصرية والبنرات</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">تصاميم إعلانية وبنرات متجر وهوية بصرية تجذب العملاء وترفع معدل التحويل لزيادة المبيعات بشكل ملحوظ.</p>
+            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> بنرات متحركة وثابتة عالية الدقة</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> تصميم شعار وهوية متناسقة</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> قوالب سوشيال ميديا جاهزة</li>
+            </ul>
+          </div>
+          <button onclick="selectServiceForContact('تصميم هوية بصرية وبنرات')" class="w-full py-2.5 rounded-xl bg-blue-950 hover:bg-blue-600 text-cyan-300 hover:text-white border border-blue-800 font-bold text-xs transition-colors flex items-center justify-center gap-2">
+            <span>طلب الخدمة</span>
+            <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Packages Section -->
+  <section id="packages" class="relative py-24 bg-[#050B14] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950 border border-blue-500/30 text-cyan-300 text-xs font-bold mb-4 font-alexandria">
+          <i class="fa-solid fa-tag text-cyan-400"></i>
+          <span>أسعار شفافة وبدون رسوم مخفية</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-alexandria text-white tracking-tight mb-4">
+          اختر الباقة المناسبة <span class="bg-gradient-to-l from-cyan-400 to-blue-500 bg-clip-text text-transparent">لحجم مشروعك</span>
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300">دفع لمرة واحدة مدى الحياة، بدون اشتراكات شهرية، مع تسليم سريع ودعم فني متواصل.</p>
+      </div>
+
+      <div id="packages-grid" class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch"></div>
+
+      <div class="mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-blue-950/70 via-slate-900 to-blue-950/70 border border-blue-500/30 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-right">
+        <div>
+          <h4 class="text-xl font-bold font-alexandria text-white">هل تحتاج ميزات مخصصة أو نظام برمجيات ضخم؟</h4>
+          <p class="text-xs sm:text-sm text-slate-400 mt-1">تواصل مع مهندسينا لنقوم ببناء حل مخصص يلائم نموذج عملك بدقة.</p>
+        </div>
+        <a id="custom-quote-btn" href="https://wa.me/201500522825?text=مرحباً%20سهلي%20ويب،%20أريد%20طلب%20عرض%20سعر%20مخصص%20لمشروعي" target="_blank" class="px-7 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-400/40 text-xs sm:text-sm font-bold transition-all shrink-0 flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+          <span>طلب عرض سعر مخصص</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Cost Calculator Section -->
+  <section id="calculator" class="relative py-24 bg-[#070F1E]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950 border border-blue-500/30 text-cyan-300 text-xs font-bold mb-4 font-alexandria">
+          <i class="fa-solid fa-calculator text-cyan-400"></i>
+          <span>حاسبة تفاعلية فورية</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black font-alexandria text-white tracking-tight mb-3">احسب تكلفة مشروعك بنفسك</h2>
+        <p class="text-xs sm:text-sm text-slate-300">حدد متطلبات موقعك أو متجرك واعرف التكلفة والوقت التقديري فوراً قبل البدء.</p>
+      </div>
+
+      <div class="rounded-3xl p-6 sm:p-10 bg-slate-900/90 border border-blue-500/40 shadow-2xl">
+        <div class="space-y-6 text-right">
+          <div>
+            <label class="block text-sm font-bold text-white mb-2">1. نوع المشروع الأساسي:</label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <button type="button" onclick="setCalcProjectType('store', 5100, this)" class="calc-type-btn active-calc-btn p-3.5 rounded-xl border border-cyan-400 bg-blue-950/80 text-cyan-300 font-bold text-xs sm:text-sm text-center">
+                متجر إلكتروني للمنتجات
+              </button>
+              <button type="button" onclick="setCalcProjectType('corporate', 4500, this)" class="calc-type-btn p-3.5 rounded-xl border border-slate-700 bg-slate-800/60 text-slate-300 font-bold text-xs sm:text-sm text-center hover:border-slate-500">
+                موقع تعريفي لشركة
+              </button>
+              <button type="button" onclick="setCalcProjectType('custom', 8000, this)" class="calc-type-btn p-3.5 rounded-xl border border-slate-700 bg-slate-800/60 text-slate-300 font-bold text-xs sm:text-sm text-center hover:border-slate-500">
+                لوحة تحكم ونظام مخصص
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-bold text-white mb-2">2. الميزات والإضافات المطلوبة:</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <label class="flex items-center justify-between p-3.5 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-blue-500 cursor-pointer">
+                <span class="text-xs sm:text-sm text-slate-200">بوابة دفع إلكتروني (فيزا / فودافون كاش)</span>
+                <input type="checkbox" value="1200" onchange="recalculateCost()" class="calc-addon w-4 h-4 text-blue-600 rounded bg-slate-900 border-slate-700 focus:ring-0">
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-blue-500 cursor-pointer">
+                <span class="text-xs sm:text-sm text-slate-200">دعم لغتين (عربي + إنجليزي)</span>
+                <input type="checkbox" value="1500" onchange="recalculateCost()" class="calc-addon w-4 h-4 text-blue-600 rounded bg-slate-900 border-slate-700 focus:ring-0">
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-blue-500 cursor-pointer">
+                <span class="text-xs sm:text-sm text-slate-200">باقة بنرات إعلانية وتصميم هوية</span>
+                <input type="checkbox" value="850" onchange="recalculateCost()" class="calc-addon w-4 h-4 text-blue-600 rounded bg-slate-900 border-slate-700 focus:ring-0">
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-blue-500 cursor-pointer">
+                <span class="text-xs sm:text-sm text-slate-200">ربط وتجهيز بكسل الإعلانات (Meta & TikTok)</span>
+                <input type="checkbox" value="600" onchange="recalculateCost()" class="calc-addon w-4 h-4 text-blue-600 rounded bg-slate-900 border-slate-700 focus:ring-0">
+              </label>
+            </div>
+          </div>
+
+          <div class="mt-8 p-6 rounded-2xl bg-blue-950/60 border border-blue-500/40 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div>
+              <span class="text-xs text-slate-400">التكلفة التقديرية الشاملة:</span>
+              <div class="text-3xl font-black text-cyan-400 font-mono mt-1" id="calc-total-price">5,100 ج.م</div>
+              <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1 mt-1">
+                <i class="fa-solid fa-clock"></i> مدة التنفيذ المتوقعة: 3 إلى 5 أيام عمل فقط
+              </span>
+            </div>
+
+            <button onclick="sendCalculatedQuoteToWhatsApp()" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-bold text-xs sm:text-sm shadow-lg flex items-center justify-center gap-2">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>طلب هذا العرض عبر واتساب</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us Section -->
+  <section id="why-us" class="relative py-24 bg-[#050B14]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950 border border-blue-500/30 text-cyan-300 text-xs font-bold mb-4 font-alexandria">
+          <i class="fa-solid fa-crown text-amber-400"></i>
+          <span>القيمة الحقيقية لعملائنا</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-alexandria text-white tracking-tight mb-4">
+          لماذا تختار <span class="bg-gradient-to-l from-cyan-400 to-blue-500 bg-clip-text text-transparent">سهلي ويب</span>؟
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300">المعادلة الصعبة: أعلى معايير البرمجة العالمية، بأفضل سعر وبدون أي التزامات دورية معقدة.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="p-7 rounded-3xl bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/50 transition-all text-right">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-4 font-mono font-bold">01</div>
+          <h3 class="text-lg font-bold text-white mb-2 font-alexandria">إلغاء الاشتراكات الشهرية تماماً</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">وفر آلاف الجنيهات التي تدفعها للمنصات الأخرى. متجرك ملكك بالكامل بدون رسوم شهرية أو سنوية إجبارية.</p>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/50 transition-all text-right">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl mb-4 font-mono font-bold">02</div>
+          <h3 class="text-lg font-bold text-white mb-2 font-alexandria">سرعة تحميل خارقة (0.3 ثانية)</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">نبني مواقعنا بأحدث تقنيات الويب العالمية لضمان سرعة فائقة تمنع مغادرة العميل وتزيد مبيعاتك بنسبة تتجاوز 40%.</p>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/50 transition-all text-right">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl mb-4 font-mono font-bold">03</div>
+          <h3 class="text-lg font-bold text-white mb-2 font-alexandria">لوحة تحكم عربية فائقة السهولة</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">تستطيع إضافة المنتجات، وتعديل الأسعار والخصومات، وتلقي الطلبات بضغطة زر وبدون الحاجة لأي خبرة برمجية.</p>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/50 transition-all text-right">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl mb-4 font-mono font-bold">04</div>
+          <h3 class="text-lg font-bold text-white mb-2 font-alexandria">قواعد بيانات سحابية مجانية مدى الحياة</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">نربط متجرك بسيرفرات وقواعد بيانات سحابية مشفرة وسريعة لا تكلفك أي مصاريف استضافة إضافية لبياناتك.</p>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/50 transition-all text-right">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl mb-4 font-mono font-bold">05</div>
+          <h3 class="text-lg font-bold text-white mb-2 font-alexandria">تصميم مخصص وتجربة مستخدم فاخرة</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">لا نستخدم قوالب مكررة. كل متجر يتم تصميمه بما يبرز هويتك الفريدة ويجعل عميلك يشعر بالثقة الفورية للشراء.</p>
+        </div>
+
+        <div class="p-7 rounded-3xl bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/50 transition-all text-right">
+          <div class="w-12 h-12 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-xl mb-4 font-mono font-bold">06</div>
+          <h3 class="text-lg font-bold text-white mb-2 font-alexandria">دعم فني وتدريب كامل</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">نسلمك المتجر مع فيديو تدريبي خطوة بخطوة، مع دعم فني متواصل للإجابة على كل استفساراتك في أي وقت.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="relative py-24 bg-[#070F1E]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950 border border-blue-500/30 text-cyan-300 text-xs font-bold mb-4 font-alexandria">
+          <i class="fa-solid fa-star text-amber-400"></i>
+          <span>قصص نجاح حقيقية</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-alexandria text-white tracking-tight mb-4">
+          ماذا يقول عملاؤنا عن <span class="bg-gradient-to-l from-cyan-400 to-blue-500 bg-clip-text text-transparent">سهلي ويب</span>؟
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300">فخورون بثقة أصحاب المتاجر والمشاريع الناجحة الذين اعتمدوا على حلولنا التقنية.</p>
+      </div>
+
+      <div id="testimonials-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+    </div>
+  </section>
+
+  <!-- Contact & Project Inquiry Form -->
+  <section id="contact" class="relative py-24 bg-[#050B14] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950 border border-blue-500/30 text-cyan-300 text-xs font-bold mb-4 font-alexandria">
+          <i class="fa-solid fa-paper-plane text-cyan-400"></i>
+          <span>ابدأ مشروعك اليوم</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-alexandria text-white tracking-tight mb-4">
+          تواصل معنا وخلّي <span class="bg-gradient-to-l from-cyan-400 to-blue-500 bg-clip-text text-transparent">انطلاقتك الرقمية</span> تبدأ الآن
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300">املأ بيانات طلبك وسيتواصل معك أحد مهندسينا فوراً لبدء التنفيذ.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-5 space-y-6">
+          <div class="p-7 sm:p-8 rounded-3xl bg-slate-900/90 border border-blue-900/40 text-right">
+            <h3 class="text-xl font-bold font-alexandria text-white mb-6">قنوات الاتصال المباشرة</h3>
+
+            <div class="space-y-4">
+              <a id="contact-direct-whatsapp" href="https://wa.me/201500522825" target="_blank" class="p-4 rounded-2xl bg-emerald-950/40 border border-emerald-500/30 hover:border-emerald-400 text-white flex items-center justify-between transition-all group">
+                <div class="flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </div>
+                  <div>
+                    <div class="text-xs text-slate-400">محادثة واتساب الرسمية</div>
+                    <div class="text-sm font-bold text-emerald-300 font-mono" dir="ltr" id="display-whatsapp-num">+20 150 052 2825</div>
+                  </div>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 font-bold">متاح 24/7</span>
+              </a>
+
+              <div class="p-4 rounded-2xl bg-slate-800/50 border border-slate-700 text-white flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl">
+                  <i class="fa-solid fa-earth-americas"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-slate-400">نطاق الخدمة</div>
+                  <div class="text-sm font-bold text-white">مصر وكافة دول الوطن العربي (عن بُعد)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-7 sm:p-8 rounded-3xl bg-slate-900/90 border border-blue-900/40 text-right">
+            <h3 class="text-lg font-bold font-alexandria text-white mb-2">منصاتنا الرسمية</h3>
+            <p class="text-xs text-slate-400 mb-6">تابع شروحاتنا وأحدث المشاريع والعروض التقنية:</p>
+            <div class="grid grid-cols-2 gap-3" id="social-buttons-container"></div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="p-7 sm:p-10 rounded-3xl bg-slate-900/90 border border-blue-500/40 shadow-2xl relative text-right">
+            <h3 class="text-2xl font-black font-alexandria text-white mb-1">استمارة طلب مشروع جديد</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mb-6">املأ البيانات وسيقوم فريق سهلي ويب بمراجعة متطلباتك فوراً.</p>
+
+            <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-300 mb-1.5">الاسم بالكامل <span class="text-cyan-400">*</span></label>
+                  <input id="form-name" type="text" required placeholder="مثال: أحمد محمود" class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 focus:border-cyan-400 focus:outline-none text-white text-sm">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-300 mb-1.5">رقم الهاتف / واتساب <span class="text-cyan-400">*</span></label>
+                  <input id="form-phone" type="tel" required placeholder="مثال: 01012345678" class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 focus:border-cyan-400 focus:outline-none text-white text-sm text-right" dir="ltr">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-300 mb-1.5">الخدمة المطلوبة</label>
+                  <select id="form-service" class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 focus:border-cyan-400 focus:outline-none text-white text-sm">
+                    <option value="تصميم متجر إلكتروني">تصميم وتطوير متجر إلكتروني</option>
+                    <option value="موقع تعريفي للشركة">موقع تعريفي لشركة أو نشاط</option>
+                    <option value="لوحة تحكم وإدارة مخصصة">لوحة تحكم وإدارة عمليات</option>
+                    <option value="تصميم هوية بصرية وبنرات">تصميم هوية بصرية وبنرات</option>
+                    <option value="أخرى / استشارة وتطوير مخصص">أخرى / استشارة وتطوير مخصص</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-300 mb-1.5">الباقة المفضلة</label>
+                  <select id="form-package" class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 focus:border-cyan-400 focus:outline-none text-white text-sm">
+                    <option value="باقة الانطلاقة (5,100 ج.م)">باقة الانطلاقة (5,100 ج.م)</option>
+                    <option value="باقة الاحتراف (8,500 ج.م)">باقة الاحتراف - الأكثر طلباً (8,500 ج.م)</option>
+                    <option value="باقة التوسع (12,750 ج.م)">باقة التوسع الشاملة (12,750 ج.م)</option>
+                    <option value="طلب عرض سعر مخصص">طلب عرض سعر مخصص</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-300 mb-1.5">تفاصيل وملاحظات إضافية عن فكرتك</label>
+                <textarea id="form-notes" rows="3" placeholder="اكتب نبذة مختصرة عن نشاطك أو المنتجات التي تبيعها..." class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 focus:border-cyan-400 focus:outline-none text-white text-sm"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-black text-base shadow-[0_0_25px_rgba(0,102,255,0.4)] transition-all flex items-center justify-center gap-2 group">
+                <span>إرسال الطلب والتواصل المباشر عبر واتساب</span>
+                <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
+              </button>
+
+              <p class="text-[11px] text-slate-500 text-center mt-2">
+                🔒 بياناتك محمية بالكامل وسيتم فتح محادثة فورية معك عبر واتساب لتأكيد الطلب.
+              </p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="relative bg-[#030712] border-t border-blue-900/40 pt-16 pb-12 text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+        
+        <div class="lg:col-span-5 space-y-4 text-right">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-2xl overflow-hidden shadow-md">
+              <img src="logo.png" alt="سهلي ويب" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="font-black text-2xl text-white font-alexandria">سهلي</span>
+              <span class="font-black text-2xl text-cyan-400 font-jakarta">Web</span>
+            </div>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+            وكالتك البرمجية المتخصصة في بناء وتطوير المتاجر والمواقع الإلكترونية ولوحات التحكم فائقة السرعة بدون اشتراكات شهرية.
+          </p>
+          <div class="text-xs text-emerald-400 font-semibold flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>استقبال الطلبات متاح 24 ساعة يومياً</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 text-right">
+          <h4 class="text-sm font-bold text-white font-alexandria mb-4">روابط سريعة</h4>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="#hero" class="hover:text-cyan-400 transition-colors">الرئيسية</a></li>
+            <li><a href="#services" class="hover:text-cyan-400 transition-colors">خدماتنا</a></li>
+            <li><a href="#packages" class="hover:text-cyan-400 transition-colors">الباقات والأسعار</a></li>
+            <li><a href="#calculator" class="hover:text-cyan-400 transition-colors">حاسبة التكلفة</a></li>
+            <li><a href="#why-us" class="hover:text-cyan-400 transition-colors">لماذا سهلي ويب؟</a></li>
+            <li><a href="#contact" class="hover:text-cyan-400 transition-colors">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-4 text-right space-y-4">
+          <h4 class="text-sm font-bold text-white font-alexandria">روابطنا الرسمية</h4>
+          <div class="flex flex-wrap items-center gap-2" id="footer-social-icons"></div>
+
+          <div class="pt-4 border-t border-slate-800/80">
+            <button onclick="openAdminModal()" class="text-xs px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-500/50 text-slate-400 hover:text-cyan-300 transition-all flex items-center gap-2">
+              <i class="fa-solid fa-lock text-[11px]"></i>
+              <span>بوابة الإدارة والتحكم (Admin Panel)</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div> جميع الحقوق محفوظة © <span id="current-year">2026</span> <strong>سهلي ويب (Sahly Web)</strong> - سرعة • سهولة • احترافية </div>
+        <a href="#hero" class="flex items-center gap-1.5 text-slate-400 hover:text-cyan-300 transition-colors">
+          <span>العودة للأعلى</span>
+          <i class="fa-solid fa-arrow-up text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating 24/7 WhatsApp Widget -->
+  <div class="fixed bottom-6 left-6 z-40">
+    <a id="floating-whatsapp-link" href="https://wa.me/201500522825?text=مرحباً%20سهلي%20ويب،%20أود%20الاستفسار%20عن%20تفاصيل%20المشروع" target="_blank" class="relative group p-4 rounded-full bg-gradient-to-tr from-emerald-600 to-teal-400 text-white shadow-[0_0_25px_rgba(16,185,129,0.5)] hover:shadow-[0_0_35px_rgba(16,185,129,0.8)] transition-all transform hover:scale-110 flex items-center justify-center">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-40"></span>
+      <i class="fa-brands fa-whatsapp text-2xl relative z-10"></i>
+    </a>
+  </div>
+
+  <!-- ADMIN DASHBOARD MODAL SUITE -->
+  <div id="admin-modal" class="fixed inset-0 z-[999] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
+    <div class="relative w-full max-w-5xl rounded-3xl bg-[#091122] border border-blue-500/50 shadow-2xl p-6 sm:p-8 text-right my-8 max-h-[90vh] flex flex-col">
+      
+      <div class="flex items-center justify-between pb-4 border-b border-slate-800 shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-blue-600/30 border border-cyan-400/40 flex items-center justify-center text-cyan-300">
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold font-alexandria text-white">لوحة تحكم إدارة سهلي ويب</h3>
+            <p class="text-xs text-slate-400">إدارة الباقات والأسعار، آراء العملاء، والرسائل والروابط</p>
+          </div>
+        </div>
+        <button onclick="closeAdminModal()" class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Admin Login View -->
+      <div id="admin-login-view" class="py-12 max-w-md mx-auto w-full text-center space-y-6">
+        <div class="w-16 h-16 rounded-2xl bg-blue-900/40 border border-blue-500/40 text-cyan-400 flex items-center justify-center text-2xl mx-auto">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div>
+          <h4 class="text-2xl font-bold font-alexandria text-white">تسجيل الدخول كمسؤول</h4>
+          <p class="text-xs text-slate-400 mt-1">يرجى إدخال بيانات الدخول المعتمدة لإدارة الموقع</p>
+        </div>
+
+        <form onsubmit="handleAdminLogin(event)" class="space-y-4 text-right">
+          <div>
+            <label class="block text-xs font-bold text-slate-300 mb-1">البريد الإلكتروني:</label>
+            <input id="admin-email-input" type="email" required placeholder="yousefelkassass2@gmail.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 focus:border-cyan-400 text-white text-sm text-left" dir="ltr">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-300 mb-1">كلمة المرور:</label>
+            <input id="admin-pass-input" type="password" required placeholder="••••••••" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 focus:border-cyan-400 text-white text-sm text-left" dir="ltr">
+          </div>
+
+          <div id="admin-login-error" class="hidden text-xs font-bold text-red-400 p-3 rounded-xl bg-red-950/40 border border-red-500/40 text-center">
+            بيانات الدخول غير صحيحة! يرجى التحقق وإعادة المحاولة.
+          </div>
+
+          <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-sm shadow-lg transition-all">
+            تسجيل الدخول
+          </button>
+        </form>
+      </div>
+
+      <!-- Authenticated Admin Dashboard View -->
+      <div id="admin-dashboard-view" class="hidden flex-1 overflow-y-auto pt-6 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-800">
+          <div class="flex flex-wrap items-center gap-2">
+            <button onclick="switchAdminTab('packages')" id="tab-btn-packages" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-blue-600 text-white">
+              <i class="fa-solid fa-boxes-stacked ml-1"></i> إدارة الباقات والأسعار
+            </button>
+            <button onclick="switchAdminTab('testimonials')" id="tab-btn-testimonials" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white">
+              <i class="fa-solid fa-star ml-1"></i> آراء العملاء
+            </button>
+            <button onclick="switchAdminTab('inquiries')" id="tab-btn-inquiries" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white">
+              <i class="fa-solid fa-envelope ml-1"></i> رسائل واستفسارات العملاء (<span id="inquiries-count-badge">0</span>)
+            </button>
+            <button onclick="switchAdminTab('social')" id="tab-btn-social" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white">
+              <i class="fa-solid fa-share-nodes ml-1"></i> روابط السوشيال وواتساب
+            </button>
+          </div>
+
+          <button onclick="handleAdminLogout()" class="px-3.5 py-2 rounded-xl bg-red-950/60 hover:bg-red-900 border border-red-500/40 text-red-300 text-xs font-bold transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <span>تسجيل الخروج</span>
+          </button>
+        </div>
+
+        <!-- TAB 1: Packages -->
+        <div id="admin-tab-packages" class="space-y-6">
+          <div class="flex items-center justify-between">
+            <h4 class="text-lg font-bold text-white">قائمة الباقات الحالية</h4>
+            <button onclick="showAddPackageForm()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-1.5 shadow">
+              <i class="fa-solid fa-plus"></i> إضافة باقة جديدة
+            </button>
+          </div>
+
+          <div id="package-form-container" class="hidden p-5 rounded-2xl bg-slate-900 border border-cyan-500/40 space-y-4">
+            <h5 class="text-sm font-bold text-cyan-300" id="package-form-title">إضافة باقة جديدة</h5>
+            <form onsubmit="savePackage(event)" class="space-y-3">
+              <input type="hidden" id="pkg-id">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div>
+                  <label class="block text-[11px] text-slate-300 mb-1">اسم الباقة:</label>
+                  <input id="pkg-name" type="text" required placeholder="باقة الانطلاقة" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
+                </div>
+                <div>
+                  <label class="block text-[11px] text-slate-300 mb-1">السعر (بالجنيه):</label>
+                  <input id="pkg-price" type="text" required placeholder="5,100" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs font-mono">
+                </div>
+                <div>
+                  <label class="block text-[11px] text-slate-300 mb-1">شارة الباقة (Badge):</label>
+                  <input id="pkg-badge" type="text" placeholder="الأكثر طلباً ⭐" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-[11px] text-slate-300 mb-1">الوصف المختصر:</label>
+                <input id="pkg-desc" type="text" required placeholder="مثالية للمشاريع الناشئة وتجربة البيع الأولى" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
+              </div>
+
+              <div>
+                <label class="block text-[11px] text-slate-300 mb-1">الميزات (افصل بين كل ميزة بسطر جديد):</label>
+                <textarea id="pkg-features" rows="4" required placeholder="متجر حتى 50 منتج&#10;طلب فوري عبر واتساب&#10;لوحة تحكم سهلة&#10;استضافة ودومين مجاني" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs"></textarea>
+              </div>
+
+              <div class="flex items-center gap-2 pt-2">
+                <button type="submit" class="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold">حفظ الباقة</button>
+                <button type="button" onclick="hidePackageForm()" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 text-xs">إلغاء</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="space-y-3" id="admin-packages-list"></div>
+        </div>
+
+        <!-- TAB 2: Testimonials -->
+        <div id="admin-tab-testimonials" class="hidden space-y-6">
+          <div class="flex items-center justify-between">
+            <h4 class="text-lg font-bold text-white">إدارة آراء وتجارب العملاء</h4>
+            <button onclick="showAddTestimonialForm()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-1.5 shadow">
+              <i class="fa-solid fa-plus"></i> إضافة رأي عميل جديد
+            </button>
+          </div>
+
+          <div id="testimonial-form-container" class="hidden p-5 rounded-2xl bg-slate-900 border border-cyan-500/40 space-y-4">
+            <h5 class="text-sm font-bold text-cyan-300">إضافة تقييم جديد</h5>
+            <form onsubmit="saveTestimonial(event)" class="space-y-3">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div>
+                  <label class="block text-[11px] text-slate-300 mb-1">اسم العميل:</label>
+                  <input id="t-name" type="text" required placeholder="م. كريم الشناوي" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
+                </div>
+                <div>
+                  <label class="block text-[11px] text-slate-300 mb-1">المجال / المتجر:</label>
+                  <input id="t-business" type="text" required placeholder="متجر أزياء وإكسسوارات" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
+                </div>
+                <div>
+                  <label class="block text-[11px] text-slate-300 mb-1">التقييم:</label>
+                  <select id="t-rating" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
+                    <option value="5">⭐⭐⭐⭐⭐ (5 نجوم)</option>
+                    <option value="4">⭐⭐⭐⭐ (4 نجوم)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-[11px] text-slate-300 mb-1">رأي العميل وتجربته:</label>
+                <textarea id="t-comment" rows="3" required placeholder="خدمة ممتازة وسرعة تسليم غير طبيعية..." class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs"></textarea>
+              </div>
+
+              <div class="flex items-center gap-2 pt-2">
+                <button type="submit" class="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold">إضافة الرأي</button>
+                <button type="button" onclick="hideTestimonialForm()" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 text-xs">إلغاء</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="space-y-3" id="admin-testimonials-list"></div>
+        </div>
+
+        <!-- TAB 3: Inquiries -->
+        <div id="admin-tab-inquiries" class="hidden space-y-6">
+          <div class="flex items-center justify-between">
+            <h4 class="text-lg font-bold text-white">الرسائل والطلبات المستلمة من الموقع</h4>
+            <button onclick="clearAllInquiries()" class="px-3.5 py-1.5 rounded-xl bg-slate-800 hover:bg-red-950 text-slate-300 hover:text-red-400 text-xs border border-slate-700">مسح السجل</button>
+          </div>
+          <div id="admin-inquiries-list" class="space-y-3"></div>
+        </div>
+
+        <!-- TAB 4: Social Links -->
+        <div id="admin-tab-social" class="hidden space-y-6">
+          <h4 class="text-lg font-bold text-white">إدارة الروابط الرسمية وأرقام التواصل</h4>
+          <form onsubmit="saveSocialLinks(event)" class="space-y-4 max-w-2xl">
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">رابط تيك توك (TikTok):</label>
+              <input id="social-input-tiktok" type="url" required class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs font-mono text-left" dir="ltr">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">رابط يوتيوب (YouTube):</label>
+              <input id="social-input-youtube" type="url" required class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs font-mono text-left" dir="ltr">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">رابط إنستغرام (Instagram):</label>
+              <input id="social-input-instagram" type="url" required class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs font-mono text-left" dir="ltr">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">رابط فيسبوك (Facebook):</label>
+              <input id="social-input-facebook" type="url" required class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs font-mono text-left" dir="ltr">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">رقم واتساب (شاملاً كود الدولة بدون +):</label>
+              <input id="social-input-whatsapp" type="text" required placeholder="201500522825" class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs font-mono text-left" dir="ltr">
+            </div>
+            <button type="submit" class="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-xs shadow-md">حفظ الروابط وتحديث الموقع فوراً</button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- VANILLA JAVASCRIPT ENGINE -->
+  <script>
+    const ADMIN_CREDENTIALS = {
+      email: 'yousefelkassass2@gmail.com',
+      password: 'sigma333//'
+    };
+
+    const DEFAULT_SOCIAL_LINKS = {
+      tiktok: 'https://tiktok.com/@sahlyweb',
+      youtube: 'https://youtube.com/@SahlyWeb',
+      instagram: 'https://instagram.com/sahlyweb',
+      facebook: 'https://www.facebook.com/people/Sahly-Web/61592933622932/',
+      whatsapp: '201500522825'
+    };
+
+    const DEFAULT_PACKAGES = [
+      {
+        id: 'starter',
+        name: 'باقة الانطلاقة (Starter)',
+        price: '5,100',
+        badge: 'الأفضل للبداية 🚀',
+        isPopular: false,
+        desc: 'الحل الأمثل لإطلاق متجرك أو نشاطك التجاري والبدء في استلام أولى طلباتك بسرعة واحترافية.',
+        features: [
+          'متجر إلكتروني سريع حتى 50 منتج',
+          'استقبال الطلبات الفورية بنقرة عبر WhatsApp',
+          'لوحة تحكم سهلة وسريعة باللغة العربية',
+          'تصميم مخصص بالكامل متوافق مع الموبايل',
+          'استضافة سحابية فائقة السرعة ودومين مجاني',
+          'ربط بكسل فيسبوك وتيك توك لتتبع المبيعات',
+          'دعم فني وتدريب مجاني لمدة شهر'
+        ]
+      },
+      {
+        id: 'pro',
+        name: 'باقة الاحتراف (Pro)',
+        price: '8,500',
+        badge: 'الأكثر طلباً واختياراً ⭐',
+        isPopular: true,
+        desc: 'الباقة المتكاملة للعلامات التجارية والمتاجر التي تستهدف نمواً سريعاً ومبيعات يومية مضاعفة.',
+        features: [
+          'متجر إلكتروني متقدم حتى 200 منتج',
+          'سلة شراء ذكية ومتقدمة بدون رسوم شهرية',
+          'باقة 3 بنرات إعلانية وتصميم هوية بصرية كاملة',
+          'تهيئة متقدمة لمحركات البحث (SEO)',
+          'نظام تتبع مباشر لحالة الشحن والطلبات',
+          'ربط كافة منصات الإعلانات (Pixel & CAPI)',
+          'دعم فني وتحديثات مستمرة لمدة 3 أشهر'
+        ]
+      },
+      {
+        id: 'enterprise',
+        name: 'باقة التوسع (Enterprise)',
+        price: '12,750',
+        badge: 'أعلى أداء وميزات 💎',
+        isPopular: false,
+        desc: 'حل برمجي مؤسسي شامل بدون أي قيود مع بوابات دفع إلكتروني متعددة وأنظمة أتمتة مبيعات.',
+        features: [
+          'متجر متكامل بمنتجات غير محدودة (Unlimited)',
+          'ربط وتفعيل بوابات الدفع الإلكتروني (فيزا / فودافون كاش)',
+          'حساب تلقائي لتكلفة الشحن حسب المحافظات والمدن',
+          'لوحة تحكم وإدارة مخزون وحسابات متقدمة',
+          'تطبيق ويب تقدمي (PWA) سريع للتحميل على الهواتف',
+          'تصميم هوية بصرية وبنرات حصرية بالكامل',
+          'دعم فني مخصص وأولوية على مدار 6 أشهر'
+        ]
+      }
+    ];
+
+    const DEFAULT_TESTIMONIALS = [
+      {
+        id: '1',
+        name: 'م. أحمد سمير',
+        business: 'مؤسس متجر Trendy Wear',
+        comment: 'تجربة ممتازة مع سهلي ويب! المتجر سريع جداً وطلبات الواتساب زادت بنسبة 60% بفضل سهولة إتمام الشراء وسرعة الموقع.',
+        rating: 5
+      },
+      {
+        id: '2',
+        name: 'سارة عبد الرحمن',
+        business: 'براند مستحضرات تجميل',
+        comment: 'أفضل استثمار عملته لمشروعي! ارتحت تماماً من الاشتراكات الشهرية المرهقة للمنصات، ولوحة التحكم سهلة جداً من الموبايل.',
+        rating: 5
+      },
+      {
+        id: '3',
+        name: 'كريم الشناوي',
+        business: 'شركة أجهزة وإلكترونيات',
+        comment: 'تسليم في الموعد بالضبط مع كود نظيف وتصميم فاخر جداً. الدعم الفني متجاوب في أي وقت وساعدوني في كل خطوة.',
+        rating: 5
+      }
+    ];
+
+    function getStoredData(key, defaultVal) {
+      const stored = localStorage.getItem(key);
+      if (!stored) {
+        localStorage.setItem(key, JSON.stringify(defaultVal));
+        return defaultVal;
+      }
+      try { return JSON.parse(stored); } catch (e) { return defaultVal; }
+    }
+
+    function setStoredData(key, val) {
+      localStorage.setItem(key, JSON.stringify(val));
+    }
+
+    let appPackages = getStoredData('sahly_packages', DEFAULT_PACKAGES);
+    let appTestimonials = getStoredData('sahly_testimonials', DEFAULT_TESTIMONIALS);
+    let appSocial = getStoredData('sahly_social', DEFAULT_SOCIAL_LINKS);
+    let appInquiries = getStoredData('sahly_inquiries', []);
+
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      const bgColor = type === 'success' ? 'bg-emerald-950 border-emerald-500/50 text-emerald-300' : 'bg-red-950 border-red-500/50 text-red-300';
+      const icon = type === 'success' ? 'fa-circle-check text-emerald-400' : 'fa-circle-exclamation text-red-400';
+      
+      toast.className = `${bgColor} pointer-events-auto border px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-2 text-xs font-bold transition-all duration-300 transform -translate-y-2 opacity-0 font-cairo`;
+      toast.innerHTML = `<i class="fa-solid ${icon}"></i> <span>${message}</span>`;
+      container.appendChild(toast);
+
+      setTimeout(() => toast.classList.remove('-translate-y-2', 'opacity-0'), 50);
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+
+    function renderPackages() {
+      const container = document.getElementById('packages-grid');
+      container.innerHTML = appPackages.map(pkg => {
+        const isPop = pkg.isPopular;
+        return `
+          <div class="relative rounded-3xl p-8 sm:p-9 flex flex-col justify-between transition-all duration-300 ${
+            isPop 
+              ? 'bg-gradient-to-b from-blue-900/60 to-slate-900 border-2 border-cyan-400 shadow-[0_0_40px_rgba(0,102,255,0.35)] scale-105 z-10' 
+              : 'bg-slate-900/80 border border-blue-900/40 hover:border-slate-700'
+          }">
+            ${pkg.badge ? `
+              <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold shadow-lg ${
+                isPop ? 'bg-gradient-to-r from-cyan-400 to-blue-600 text-slate-950' : 'bg-blue-950 border border-blue-500/40 text-cyan-300'
+              }">
+                ${pkg.badge}
+              </div>
+            ` : ''}
+
+            <div>
+              <div class="text-center pb-6 border-b border-slate-800">
+                <h3 class="text-xl sm:text-2xl font-black font-alexandria text-white mb-2">${pkg.name}</h3>
+                <p class="text-xs text-slate-400 leading-relaxed min-h-[36px]">${pkg.desc}</p>
+                <div class="mt-4 flex items-baseline justify-center gap-1.5">
+                  <span class="text-3xl sm:text-4xl font-black text-cyan-400 font-mono">${pkg.price}</span>
+                  <span class="text-xs text-slate-400 font-bold">ج.م / لمرة واحدة</span>
+                </div>
+              </div>
+
+              <ul class="py-6 space-y-3 text-xs sm:text-sm text-slate-300 text-right">
+                ${pkg.features.map(f => `
+                  <li class="flex items-center gap-2.5">
+                    <i class="fa-solid fa-circle-check text-cyan-400 text-xs shrink-0"></i>
+                    <span>${f}</span>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+
+            <button onclick="selectPackageForContact('${pkg.name}', '${pkg.price}')" class="w-full py-3.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-2 ${
+              isPop 
+                ? 'bg-gradient-to-r from-cyan-400 to-blue-600 hover:from-cyan-300 hover:to-blue-500 text-slate-950 shadow-[0_0_20px_rgba(0,240,255,0.4)]' 
+                : 'bg-blue-950 hover:bg-blue-600 text-cyan-300 hover:text-white border border-blue-800'
+            }">
+              <span>اختيار هذه الباقة</span>
+              <i class="fa-solid fa-arrow-left text-xs"></i>
+            </button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderTestimonials() {
+      const container = document.getElementById('testimonials-grid');
+      container.innerHTML = appTestimonials.map(t => `
+        <div class="rounded-3xl p-7 bg-slate-900/80 border border-blue-900/40 hover:border-cyan-500/50 transition-all flex flex-col justify-between text-right relative group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-1 text-amber-400 text-xs">${'⭐'.repeat(t.rating)}</div>
+              <i class="fa-solid fa-quote-left text-blue-500/30 text-2xl group-hover:text-cyan-400/50 transition-colors"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6 italic">"${t.comment}"</p>
+          </div>
+          <div class="pt-4 border-t border-slate-800 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-blue-950 border border-blue-500/40 flex items-center justify-center text-cyan-400 font-bold">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-white">${t.name}</h4>
+              <div class="text-xs text-slate-400">${t.business}</div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function updateSocialLinks() {
+      const waNumber = appSocial.whatsapp;
+      const waUrl = `https://wa.me/${waNumber}`;
+
+      document.getElementById('nav-whatsapp-link').href = waUrl;
+      document.getElementById('hero-whatsapp-btn').href = `${waUrl}?text=${encodeURIComponent('مرحباً سهلي ويب، أرغب في استشارة مجانية لمشروعي')}`;
+      document.getElementById('contact-direct-whatsapp').href = waUrl;
+      document.getElementById('floating-whatsapp-link').href = `${waUrl}?text=${encodeURIComponent('مرحباً سهلي ويب، أود الاستفسار عن تفاصيل المشروع')}`;
+      document.getElementById('custom-quote-btn').href = `${waUrl}?text=${encodeURIComponent('مرحباً سهلي ويب، أريد طلب عرض سعر مخصص لمشروعي')}`;
+      document.getElementById('display-whatsapp-num').innerText = `+${waNumber.slice(0, 2)} ${waNumber.slice(2, 5)} ${waNumber.slice(5, 8)} ${waNumber.slice(8)}`;
+
+      document.getElementById('social-buttons-container').innerHTML = `
+        <a href="${appSocial.tiktok}" target="_blank" class="p-3 rounded-xl bg-black/60 hover:bg-black border border-slate-700 hover:border-pink-500 text-white flex items-center gap-2.5 transition-all">
+          <i class="fa-brands fa-tiktok text-cyan-400"></i>
+          <div><div class="text-xs font-bold">تيك توك</div><div class="text-[10px] text-slate-400 font-mono">@sahlyweb</div></div>
+        </a>
+        <a href="${appSocial.youtube}" target="_blank" class="p-3 rounded-xl bg-red-950/20 hover:bg-red-950/40 border border-slate-700 hover:border-red-500 text-white flex items-center gap-2.5 transition-all">
+          <i class="fa-brands fa-youtube text-red-500"></i>
+          <div><div class="text-xs font-bold">يوتيوب</div><div class="text-[10px] text-slate-400 font-mono">@SahlyWeb</div></div>
+        </a>
+        <a href="${appSocial.instagram}" target="_blank" class="p-3 rounded-xl bg-purple-950/20 hover:bg-purple-950/40 border border-slate-700 hover:border-pink-500 text-white flex items-center gap-2.5 transition-all">
+          <i class="fa-brands fa-instagram text-pink-400"></i>
+          <div><div class="text-xs font-bold">إنستغرام</div><div class="text-[10px] text-slate-400 font-mono">@sahlyweb</div></div>
+        </a>
+        <a href="${appSocial.facebook}" target="_blank" class="p-3 rounded-xl bg-blue-950/30 hover:bg-blue-950/60 border border-slate-700 hover:border-blue-500 text-white flex items-center gap-2.5 transition-all">
+          <i class="fa-brands fa-facebook text-blue-400"></i>
+          <div><div class="text-xs font-bold">فيسبوك</div><div class="text-[10px] text-slate-400 font-mono">Sahly Web</div></div>
+        </a>
+      `;
+
+      document.getElementById('footer-social-icons').innerHTML = `
+        <a href="${appSocial.tiktok}" target="_blank" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-700 hover:border-pink-500 hover:text-pink-400 flex items-center justify-center transition-all"><i class="fa-brands fa-tiktok text-sm"></i></a>
+        <a href="${appSocial.youtube}" target="_blank" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-700 hover:border-red-500 hover:text-red-400 flex items-center justify-center transition-all"><i class="fa-brands fa-youtube text-sm"></i></a>
+        <a href="${appSocial.instagram}" target="_blank" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-700 hover:border-pink-500 hover:text-pink-400 flex items-center justify-center transition-all"><i class="fa-brands fa-instagram text-sm"></i></a>
+        <a href="${appSocial.facebook}" target="_blank" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-700 hover:border-blue-500 hover:text-blue-400 flex items-center justify-center transition-all"><i class="fa-brands fa-facebook text-sm"></i></a>
+      `;
+    }
+
+    let calcBasePrice = 5100;
+    function setCalcProjectType(type, price, btnEl) {
+      calcBasePrice = price;
+      document.querySelectorAll('.calc-type-btn').forEach(b => {
+        b.classList.remove('active-calc-btn', 'border-cyan-400', 'bg-blue-950/80', 'text-cyan-300');
+        b.classList.add('border-slate-700', 'bg-slate-800/60', 'text-slate-300');
+      });
+      btnEl.classList.add('active-calc-btn', 'border-cyan-400', 'bg-blue-950/80', 'text-cyan-300');
+      recalculateCost();
+    }
+
+    function recalculateCost() {
+      let total = calcBasePrice;
+      document.querySelectorAll('.calc-addon:checked').forEach(addon => {
+        total += parseInt(addon.value);
+      });
+      document.getElementById('calc-total-price').innerText = `${total.toLocaleString('ar-EG')} ج.م`;
+    }
+
+    function sendCalculatedQuoteToWhatsApp() {
+      const priceText = document.getElementById('calc-total-price').innerText;
+      const text = `مرحباً سهلي ويب 🚀\nقمت بحساب تكلفة مشروعي عبر الحاسبة التفاعلية وكانت النتيجة: ${priceText}.\nأرغب في مناقشة تفاصيل التنفيذ وبدء المشروع معكم.`;
+      window.open(`https://wa.me/${appSocial.whatsapp}?text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    function selectServiceForContact(serviceName) {
+      document.getElementById('form-service').value = serviceName;
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function selectPackageForContact(packageName, packagePrice) {
+      document.getElementById('form-package').value = `${packageName} (${packagePrice} ج.م)`;
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('form-name').value;
+      const phone = document.getElementById('form-phone').value;
+      const service = document.getElementById('form-service').value;
+      const pkg = document.getElementById('form-package').value;
+      const notes = document.getElementById('form-notes').value;
+
+      const newInquiry = {
+        id: Date.now().toString(),
+        name, phone, service, package: pkg, notes,
+        date: new Date().toLocaleDateString('ar-EG', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })
+      };
+      appInquiries.unshift(newInquiry);
+      setStoredData('sahly_inquiries', appInquiries);
+
+      showToast('تم استلام طلبك بنجاح! جاري تحويلك إلى واتساب...');
+
+      const text = `مرحباً سهلي ويب 🚀\nأود بدء مشروع جديد مع وكالتكم:\n- الاسم: ${name}\n- الهاتف: ${phone}\n- الخدمة: ${service}\n- الباقة المفضلة: ${pkg}\n- ملاحظات: ${notes || 'لا توجد'}`;
+      
+      setTimeout(() => {
+        window.open(`https://wa.me/${appSocial.whatsapp}?text=${encodeURIComponent(text)}`, '_blank');
+        document.getElementById('contact-form').reset();
+      }, 800);
+    }
+
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const mobileIcon = document.getElementById('mobile-menu-icon');
+
+    function toggleMobileMenu() {
+      if (mobileDrawer.classList.contains('hidden')) {
+        mobileDrawer.classList.remove('hidden');
+        mobileIcon.classList.replace('fa-bars', 'fa-xmark');
+      } else {
+        mobileDrawer.classList.add('hidden');
+        mobileIcon.classList.replace('fa-xmark', 'fa-bars');
+      }
+    }
+    mobileBtn.addEventListener('click', toggleMobileMenu);
+
+    let isAdminLoggedIn = localStorage.getItem('sahly_admin_session') === 'true';
+
+    function openAdminModal() {
+      const modal = document.getElementById('admin-modal');
+      modal.classList.replace('hidden', 'flex');
+      if (isAdminLoggedIn) showAdminDashboard();
+      else showAdminLogin();
+    }
+
+    function closeAdminModal() {
+      document.getElementById('admin-modal').classList.replace('flex', 'hidden');
+    }
+
+    function showAdminLogin() {
+      document.getElementById('admin-login-view').classList.remove('hidden');
+      document.getElementById('admin-dashboard-view').classList.add('hidden');
+      document.getElementById('admin-login-error').classList.add('hidden');
+    }
+
+    function showAdminDashboard() {
+      document.getElementById('admin-login-view').classList.add('hidden');
+      document.getElementById('admin-dashboard-view').classList.remove('hidden');
+      switchAdminTab('packages');
+      renderAdminPackages();
+      renderAdminTestimonials();
+      renderAdminInquiries();
+      loadSocialForm();
+    }
+
+    function handleAdminLogin(e) {
+      e.preventDefault();
+      const email = document.getElementById('admin-email-input').value.trim();
+      const pass = document.getElementById('admin-pass-input').value;
+
+      if (email === ADMIN_CREDENTIALS.email && pass === ADMIN_CREDENTIALS.password) {
+        isAdminLoggedIn = true;
+        localStorage.setItem('sahly_admin_session', 'true');
+        showToast('تم تسجيل الدخول بنجاح كمسؤول!');
+        showAdminDashboard();
+      } else {
+        document.getElementById('admin-login-error').classList.remove('hidden');
+      }
+    }
+
+    function handleAdminLogout() {
+      isAdminLoggedIn = false;
+      localStorage.removeItem('sahly_admin_session');
+      showToast('تم تسجيل الخروج بنجاح.');
+      showAdminLogin();
+    }
+
+    function switchAdminTab(tabName) {
+      ['packages', 'testimonials', 'inquiries', 'social'].forEach(t => {
+        document.getElementById(`admin-tab-${t}`).classList.add('hidden');
+        const btn = document.getElementById(`tab-btn-${t}`);
+        btn.classList.remove('bg-blue-600', 'text-white');
+        btn.classList.add('bg-slate-800', 'text-slate-300');
+      });
+
+      document.getElementById(`admin-tab-${tabName}`).classList.remove('hidden');
+      const activeBtn = document.getElementById(`tab-btn-${tabName}`);
+      activeBtn.classList.add('bg-blue-600', 'text-white');
+      activeBtn.classList.remove('bg-slate-800', 'text-slate-300');
+    }
+
+    function renderAdminPackages() {
+      document.getElementById('admin-packages-list').innerHTML = appPackages.map(pkg => `
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <strong class="text-sm text-white">${pkg.name}</strong>
+              <span class="text-xs font-mono text-cyan-400 font-bold">${pkg.price} ج.م</span>
+              ${pkg.badge ? `<span class="text-[10px] px-2 py-0.5 rounded bg-blue-950 text-cyan-300">${pkg.badge}</span>` : ''}
+            </div>
+            <p class="text-xs text-slate-400 mt-1">${pkg.desc}</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="editPackage('${pkg.id}')" class="p-2 rounded-lg bg-blue-950 text-cyan-300 hover:bg-blue-600 hover:text-white transition-colors"><i class="fa-solid fa-pen-to-square text-xs"></i></button>
+            <button onclick="deletePackage('${pkg.id}')" class="p-2 rounded-lg bg-red-950 text-red-300 hover:bg-red-600 hover:text-white transition-colors"><i class="fa-solid fa-trash text-xs"></i></button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function showAddPackageForm() {
+      document.getElementById('package-form-container').classList.remove('hidden');
+      document.getElementById('package-form-title').innerText = 'إضافة باقة جديدة';
+      document.getElementById('pkg-id').value = '';
+      document.getElementById('pkg-name').value = '';
+      document.getElementById('pkg-price').value = '';
+      document.getElementById('pkg-badge').value = '';
+      document.getElementById('pkg-desc').value = '';
+      document.getElementById('pkg-features').value = '';
+    }
+
+    function hidePackageForm() {
+      document.getElementById('package-form-container').classList.add('hidden');
+    }
+
+    function editPackage(id) {
+      const pkg = appPackages.find(p => p.id === id);
+      if (!pkg) return;
+      document.getElementById('package-form-container').classList.remove('hidden');
+      document.getElementById('package-form-title').innerText = 'تعديل الباقة';
+      document.getElementById('pkg-id').value = pkg.id;
+      document.getElementById('pkg-name').value = pkg.name;
+      document.getElementById('pkg-price').value = pkg.price;
+      document.getElementById('pkg-badge').value = pkg.badge || '';
+      document.getElementById('pkg-desc').value = pkg.desc;
+      document.getElementById('pkg-features').value = pkg.features.join('\n');
+    }
+
+    function savePackage(e) {
+      e.preventDefault();
+      const id = document.getElementById('pkg-id').value || Date.now().toString();
+      const name = document.getElementById('pkg-name').value;
+      const price = document.getElementById('pkg-price').value;
+      const badge = document.getElementById('pkg-badge').value;
+      const desc = document.getElementById('pkg-desc').value;
+      const features = document.getElementById('pkg-features').value.split('\n').filter(f => f.trim() !== '');
+
+      const pkgIndex = appPackages.findIndex(p => p.id === id);
+      const pkgData = { id, name, price, badge, desc, features, isPopular: badge.includes('طلب') };
+
+      if (pkgIndex > -1) appPackages[pkgIndex] = pkgData;
+      else appPackages.push(pkgData);
+
+      setStoredData('sahly_packages', appPackages);
+      renderPackages();
+      renderAdminPackages();
+      hidePackageForm();
+      showToast('تم حفظ الباقة بنجاح!');
+    }
+
+    function deletePackage(id) {
+      if (!confirm('هل أنت تأكد من حذف هذه الباقة؟')) return;
+      appPackages = appPackages.filter(p => p.id !== id);
+      setStoredData('sahly_packages', appPackages);
+      renderPackages();
+      renderAdminPackages();
+      showToast('تم حذف الباقة.');
+    }
+
+    function renderAdminTestimonials() {
+      document.getElementById('admin-testimonials-list').innerHTML = appTestimonials.map(t => `
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <strong class="text-sm text-white">${t.name}</strong>
+              <span class="text-xs text-slate-400">(${t.business})</span>
+              <span class="text-amber-400 text-xs">${'⭐'.repeat(t.rating)}</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-1 italic">"${t.comment}"</p>
+          </div>
+          <button onclick="deleteTestimonial('${t.id}')" class="p-2 rounded-lg bg-red-950 text-red-300 hover:bg-red-600 hover:text-white transition-colors"><i class="fa-solid fa-trash text-xs"></i></button>
+        </div>
+      `).join('');
+    }
+
+    function showAddTestimonialForm() {
+      document.getElementById('testimonial-form-container').classList.remove('hidden');
+    }
+    function hideTestimonialForm() {
+      document.getElementById('testimonial-form-container').classList.add('hidden');
+    }
+
+    function saveTestimonial(e) {
+      e.preventDefault();
+      const newT = {
+        id: Date.now().toString(),
+        name: document.getElementById('t-name').value,
+        business: document.getElementById('t-business').value,
+        rating: parseInt(document.getElementById('t-rating').value),
+        comment: document.getElementById('t-comment').value
+      };
+      appTestimonials.unshift(newT);
+      setStoredData('sahly_testimonials', appTestimonials);
+      renderTestimonials();
+      renderAdminTestimonials();
+      hideTestimonialForm();
+      showToast('تمت إضافة التقييم بنجاح!');
+    }
+
+    function deleteTestimonial(id) {
+      appTestimonials = appTestimonials.filter(t => t.id !== id);
+      setStoredData('sahly_testimonials', appTestimonials);
+      renderTestimonials();
+      renderAdminTestimonials();
+      showToast('تم حذف التقييم.');
+    }
+
+    function renderAdminInquiries() {
+      const badge = document.getElementById('inquiries-count-badge');
+      badge.innerText = appInquiries.length;
+
+      const container = document.getElementById('admin-inquiries-list');
+      if (appInquiries.length === 0) {
+        container.innerHTML = `<div class="p-8 text-center text-slate-500 text-xs">لا توجد رسائل أو طلبات مسجلة حتى الآن.</div>`;
+        return;
+      }
+
+      container.innerHTML = appInquiries.map(inq => `
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-cyan-300">${inq.name} (${inq.phone})</span>
+            <span class="text-slate-500 font-mono">${inq.date}</span>
+          </div>
+          <div class="text-xs text-slate-300">
+            <strong>الخدمة:</strong> ${inq.service} | <strong>الباقة:</strong> ${inq.package}
+          </div>
+          ${inq.notes ? `<div class="text-xs text-slate-400 bg-slate-950 p-2 rounded-lg">ملاحظات: ${inq.notes}</div>` : ''}
+          <div class="pt-2 flex justify-end">
+            <a href="https://wa.me/${inq.phone.replace(/[^0-9]/g, '')}" target="_blank" class="px-3 py-1 rounded-lg bg-emerald-950 text-emerald-300 border border-emerald-500/30 text-xs font-bold flex items-center gap-1">
+              <i class="fa-brands fa-whatsapp"></i> فتح محادثة
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function clearAllInquiries() {
+      if (!confirm('هل تريد مسح جميع سجلات الرسائل؟')) return;
+      appInquiries = [];
+      setStoredData('sahly_inquiries', appInquiries);
+      renderAdminInquiries();
+      showToast('تم مسح سجل الرسائل.');
+    }
+
+    function loadSocialForm() {
+      document.getElementById('social-input-tiktok').value = appSocial.tiktok;
+      document.getElementById('social-input-youtube').value = appSocial.youtube;
+      document.getElementById('social-input-instagram').value = appSocial.instagram;
+      document.getElementById('social-input-facebook').value = appSocial.facebook;
+      document.getElementById('social-input-whatsapp').value = appSocial.whatsapp;
+    }
+
+    function saveSocialLinks(e) {
+      e.preventDefault();
+      appSocial = {
+        tiktok: document.getElementById('social-input-tiktok').value,
+        youtube: document.getElementById('social-input-youtube').value,
+        instagram: document.getElementById('social-input-instagram').value,
+        facebook: document.getElementById('social-input-facebook').value,
+        whatsapp: document.getElementById('social-input-whatsapp').value
+      };
+      setStoredData('sahly_social', appSocial);
+      updateSocialLinks();
+      showToast('تم تحديث جميع الروابط الرسمية بنجاح!');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderPackages();
+      renderTestimonials();
+      updateSocialLinks();
+      document.getElementById('current-year').innerText = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
