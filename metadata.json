@@ -1,0 +1,6 @@
+{
+  "name": "Sahly Web | سهلي ويب",
+  "description": "الموقع الرسمي لوكالة سهلي ويب (Sahly Web) لتصميم وتطوير المواقع والمتاجر الإلكترونية ولوحات التحكم والهوية البصرية. سرعة • سهولة • احترافية.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
