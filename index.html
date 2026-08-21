@@ -161,15 +161,15 @@
         <div class="lg:col-span-7 text-center lg:text-right space-y-6">
           <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-950/80 border border-blue-500/30 text-cyan-300 text-xs sm:text-sm font-semibold">
             <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
-            <span>وقف ضياع الوقت والفلوس.. المستقبل وصل مع سهلي ويب! 🚀</span>
+            <span id="display-hero-badge">وقف ضياع الوقت والفلوس.. المستقبل وصل مع سهلي ويب! 🚀</span>
           </div>
 
-          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-alexandria text-white leading-tight tracking-tight">
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-alexandria text-white leading-tight tracking-tight" id="display-hero-title">
             متجرك وموقعك الإلكتروني <br class="hidden sm:inline" />
             بسرعة فائقة و <span class="bg-gradient-to-l from-cyan-400 via-blue-400 to-blue-600 bg-clip-text text-transparent">بدون اشتراكات شهرية</span>
           </h1>
 
-          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0" id="display-hero-desc">
             نطور لك مواقع ومتاجر إلكترونية ولوحات تحكم مخصصة تربط تلقائياً بقواعد بيانات سحابية مجانية ومدى الحياة، مع تجربة شراء فورية عبر واتساب وبوابات الدفع.
           </p>
 
@@ -187,16 +187,16 @@
 
           <div class="grid grid-cols-3 gap-3 pt-6 max-w-lg mx-auto lg:mx-0 border-t border-slate-800/80">
             <div class="text-center lg:text-right">
-              <div class="text-xl sm:text-2xl font-black text-cyan-400 font-jakarta font-mono">100%</div>
-              <div class="text-xs text-slate-400 mt-0.5">بدون رسوم شهرية</div>
+              <div class="text-xl sm:text-2xl font-black text-cyan-400 font-jakarta font-mono" id="display-stat-1-val">100%</div>
+              <div class="text-xs text-slate-400 mt-0.5" id="display-stat-1-lbl">بدون رسوم شهرية</div>
             </div>
             <div class="text-center lg:text-right">
-              <div class="text-xl sm:text-2xl font-black text-white font-jakarta font-mono">0.3s</div>
-              <div class="text-xs text-slate-400 mt-0.5">سرعة تحميل قياسية</div>
+              <div class="text-xl sm:text-2xl font-black text-white font-jakarta font-mono" id="display-stat-2-val">0.3s</div>
+              <div class="text-xs text-slate-400 mt-0.5" id="display-stat-2-lbl">سرعة تحميل قياسية</div>
             </div>
             <div class="text-center lg:text-right">
-              <div class="text-xl sm:text-2xl font-black text-emerald-400 font-jakarta font-mono">24/7</div>
-              <div class="text-xs text-slate-400 mt-0.5">دعم فني واستشارات</div>
+              <div class="text-xl sm:text-2xl font-black text-emerald-400 font-jakarta font-mono" id="display-stat-3-val">24/7</div>
+              <div class="text-xs text-slate-400 mt-0.5" id="display-stat-3-lbl">دعم فني واستشارات</div>
             </div>
           </div>
         </div>
@@ -275,83 +275,7 @@
         <p class="text-sm sm:text-base text-slate-300">نقدم باقة متكاملة من الخدمات الرقمية لنقل نشاطك التجاري إلى قمة الاحترافية والمبيعات.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="rounded-3xl p-7 bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/60 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,102,255,0.2)] flex flex-col justify-between group">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-blue-600/20 text-cyan-400 border border-blue-500/30 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </div>
-            <h3 class="text-xl font-bold font-alexandria text-white mb-3">تصميم المتاجر الإلكترونية</h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">متاجر فائقة السرعة، متوافقة مع كل الأجهزة، طلب فوري بنقرة واحدة عبر واتساب أو بوابات دفع، وبدون أي عمولات أو اشتراكات شهرية.</p>
-            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> ربط بكسل فيسبوك وتيك توك</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> سلة شراء تفاعلية وسريعة</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> حساب تكلفة الشحن للمحافظات</li>
-            </ul>
-          </div>
-          <button onclick="selectServiceForContact('تصميم متجر إلكتروني')" class="w-full py-2.5 rounded-xl bg-blue-950 hover:bg-blue-600 text-cyan-300 hover:text-white border border-blue-800 font-bold text-xs transition-colors flex items-center justify-center gap-2">
-            <span>طلب الخدمة</span>
-            <i class="fa-solid fa-arrow-left text-[10px]"></i>
-          </button>
-        </div>
-
-        <div class="rounded-3xl p-7 bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/60 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,102,255,0.2)] flex flex-col justify-between group">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-cyan-600/20 text-cyan-300 border border-cyan-500/30 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-building"></i>
-            </div>
-            <h3 class="text-xl font-bold font-alexandria text-white mb-3">المواقع التعريفية والشركات</h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">موقع تعريفي يعكس فخامة علامتك التجارية، ويعزز مصداقيتك أمام المستثمرين والعملاء بأحدث أساليب التصميم العالمي.</p>
-            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> تهيئة محركات البحث (SEO)</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> استعراض سابقة الأعمال والخدمات</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> نماذج استفسار وحجز متقدمة</li>
-            </ul>
-          </div>
-          <button onclick="selectServiceForContact('موقع تعريفي للشركة')" class="w-full py-2.5 rounded-xl bg-blue-950 hover:bg-blue-600 text-cyan-300 hover:text-white border border-blue-800 font-bold text-xs transition-colors flex items-center justify-center gap-2">
-            <span>طلب الخدمة</span>
-            <i class="fa-solid fa-arrow-left text-[10px]"></i>
-          </button>
-        </div>
-
-        <div class="rounded-3xl p-7 bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/60 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,102,255,0.2)] flex flex-col justify-between group">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-chart-line"></i>
-            </div>
-            <h3 class="text-xl font-bold font-alexandria text-white mb-3">لوحات التحكم والإدارة</h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">لوحة تحكم مبسطة وسلسة باللغة العربية تمكنك من إضافة وتعديل المنتجات، متابعة الطلبات، وإدارة المخزون من هاتفك أو حاسوبك بسهولة.</p>
-            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> إدارة سهلة للمنتجات والأسعار</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> تقارير وإحصائيات المبيعات</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> صلاحيات مستخدمين متعددة</li>
-            </ul>
-          </div>
-          <button onclick="selectServiceForContact('لوحة تحكم وإدارة مخصصة')" class="w-full py-2.5 rounded-xl bg-blue-950 hover:bg-blue-600 text-cyan-300 hover:text-white border border-blue-800 font-bold text-xs transition-colors flex items-center justify-center gap-2">
-            <span>طلب الخدمة</span>
-            <i class="fa-solid fa-arrow-left text-[10px]"></i>
-          </button>
-        </div>
-
-        <div class="rounded-3xl p-7 bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/60 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,102,255,0.2)] flex flex-col justify-between group">
-          <div>
-            <div class="w-14 h-14 rounded-2xl bg-purple-600/20 text-purple-400 border border-purple-500/30 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-palette"></i>
-            </div>
-            <h3 class="text-xl font-bold font-alexandria text-white mb-3">الهوية البصرية والبنرات</h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">تصاميم إعلانية وبنرات متجر وهوية بصرية تجذب العملاء وترفع معدل التحويل لزيادة المبيعات بشكل ملحوظ.</p>
-            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> بنرات متحركة وثابتة عالية الدقة</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> تصميم شعار وهوية متناسقة</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> قوالب سوشيال ميديا جاهزة</li>
-            </ul>
-          </div>
-          <button onclick="selectServiceForContact('تصميم هوية بصرية وبنرات')" class="w-full py-2.5 rounded-xl bg-blue-950 hover:bg-blue-600 text-cyan-300 hover:text-white border border-blue-800 font-bold text-xs transition-colors flex items-center justify-center gap-2">
-            <span>طلب الخدمة</span>
-            <i class="fa-solid fa-arrow-left text-[10px]"></i>
-          </button>
-        </div>
-      </div>
+      <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
     </div>
   </section>
 
@@ -400,48 +324,18 @@
         <div class="space-y-6 text-right">
           <div>
             <label class="block text-sm font-bold text-white mb-2">1. نوع المشروع الأساسي:</label>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <button type="button" onclick="setCalcProjectType('store', 5100, this)" class="calc-type-btn active-calc-btn p-3.5 rounded-xl border border-cyan-400 bg-blue-950/80 text-cyan-300 font-bold text-xs sm:text-sm text-center">
-                متجر إلكتروني للمنتجات
-              </button>
-              <button type="button" onclick="setCalcProjectType('corporate', 4500, this)" class="calc-type-btn p-3.5 rounded-xl border border-slate-700 bg-slate-800/60 text-slate-300 font-bold text-xs sm:text-sm text-center hover:border-slate-500">
-                موقع تعريفي لشركة
-              </button>
-              <button type="button" onclick="setCalcProjectType('custom', 8000, this)" class="calc-type-btn p-3.5 rounded-xl border border-slate-700 bg-slate-800/60 text-slate-300 font-bold text-xs sm:text-sm text-center hover:border-slate-500">
-                لوحة تحكم ونظام مخصص
-              </button>
-            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="calc-types-container"></div>
           </div>
 
           <div>
             <label class="block text-sm font-bold text-white mb-2">2. الميزات والإضافات المطلوبة:</label>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <label class="flex items-center justify-between p-3.5 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-blue-500 cursor-pointer">
-                <span class="text-xs sm:text-sm text-slate-200">بوابة دفع إلكتروني (فيزا / فودافون كاش)</span>
-                <input type="checkbox" value="1200" onchange="recalculateCost()" class="calc-addon w-4 h-4 text-blue-600 rounded bg-slate-900 border-slate-700 focus:ring-0">
-              </label>
-
-              <label class="flex items-center justify-between p-3.5 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-blue-500 cursor-pointer">
-                <span class="text-xs sm:text-sm text-slate-200">دعم لغتين (عربي + إنجليزي)</span>
-                <input type="checkbox" value="1500" onchange="recalculateCost()" class="calc-addon w-4 h-4 text-blue-600 rounded bg-slate-900 border-slate-700 focus:ring-0">
-              </label>
-
-              <label class="flex items-center justify-between p-3.5 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-blue-500 cursor-pointer">
-                <span class="text-xs sm:text-sm text-slate-200">باقة بنرات إعلانية وتصميم هوية</span>
-                <input type="checkbox" value="850" onchange="recalculateCost()" class="calc-addon w-4 h-4 text-blue-600 rounded bg-slate-900 border-slate-700 focus:ring-0">
-              </label>
-
-              <label class="flex items-center justify-between p-3.5 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-blue-500 cursor-pointer">
-                <span class="text-xs sm:text-sm text-slate-200">ربط وتجهيز بكسل الإعلانات (Meta & TikTok)</span>
-                <input type="checkbox" value="600" onchange="recalculateCost()" class="calc-addon w-4 h-4 text-blue-600 rounded bg-slate-900 border-slate-700 focus:ring-0">
-              </label>
-            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="calc-addons-container"></div>
           </div>
 
           <div class="mt-8 p-6 rounded-2xl bg-blue-950/60 border border-blue-500/40 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
               <span class="text-xs text-slate-400">التكلفة التقديرية الشاملة:</span>
-              <div class="text-3xl font-black text-cyan-400 font-mono mt-1" id="calc-total-price">5,100 ج.م</div>
+              <div class="text-3xl font-black text-cyan-400 font-mono mt-1" id="calc-total-price">0 ج.م</div>
               <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1 mt-1">
                 <i class="fa-solid fa-clock"></i> مدة التنفيذ المتوقعة: 3 إلى 5 أيام عمل فقط
               </span>
@@ -472,43 +366,7 @@
         <p class="text-sm sm:text-base text-slate-300">المعادلة الصعبة: أعلى معايير البرمجة العالمية، بأفضل سعر وبدون أي التزامات دورية معقدة.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="p-7 rounded-3xl bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/50 transition-all text-right">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-4 font-mono font-bold">01</div>
-          <h3 class="text-lg font-bold text-white mb-2 font-alexandria">إلغاء الاشتراكات الشهرية تماماً</h3>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">وفر آلاف الجنيهات التي تدفعها للمنصات الأخرى. متجرك ملكك بالكامل بدون رسوم شهرية أو سنوية إجبارية.</p>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/50 transition-all text-right">
-          <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl mb-4 font-mono font-bold">02</div>
-          <h3 class="text-lg font-bold text-white mb-2 font-alexandria">سرعة تحميل خارقة (0.3 ثانية)</h3>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">نبني مواقعنا بأحدث تقنيات الويب العالمية لضمان سرعة فائقة تمنع مغادرة العميل وتزيد مبيعاتك بنسبة تتجاوز 40%.</p>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/50 transition-all text-right">
-          <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl mb-4 font-mono font-bold">03</div>
-          <h3 class="text-lg font-bold text-white mb-2 font-alexandria">لوحة تحكم عربية فائقة السهولة</h3>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">تستطيع إضافة المنتجات، وتعديل الأسعار والخصومات، وتلقي الطلبات بضغطة زر وبدون الحاجة لأي خبرة برمجية.</p>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/50 transition-all text-right">
-          <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl mb-4 font-mono font-bold">04</div>
-          <h3 class="text-lg font-bold text-white mb-2 font-alexandria">قواعد بيانات سحابية مجانية مدى الحياة</h3>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">نربط متجرك بسيرفرات وقواعد بيانات سحابية مشفرة وسريعة لا تكلفك أي مصاريف استضافة إضافية لبياناتك.</p>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/50 transition-all text-right">
-          <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl mb-4 font-mono font-bold">05</div>
-          <h3 class="text-lg font-bold text-white mb-2 font-alexandria">تصميم مخصص وتجربة مستخدم فاخرة</h3>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">لا نستخدم قوالب مكررة. كل متجر يتم تصميمه بما يبرز هويتك الفريدة ويجعل عميلك يشعر بالثقة الفورية للشراء.</p>
-        </div>
-
-        <div class="p-7 rounded-3xl bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/50 transition-all text-right">
-          <div class="w-12 h-12 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center text-xl mb-4 font-mono font-bold">06</div>
-          <h3 class="text-lg font-bold text-white mb-2 font-alexandria">دعم فني وتدريب كامل</h3>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">نسلمك المتجر مع فيديو تدريبي خطوة بخطوة، مع دعم فني متواصل للإجابة على كل استفساراتك في أي وقت.</p>
-        </div>
-      </div>
+      <div id="whyus-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
     </div>
   </section>
 
@@ -602,22 +460,11 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-xs font-bold text-slate-300 mb-1.5">الخدمة المطلوبة</label>
-                  <select id="form-service" class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 focus:border-cyan-400 focus:outline-none text-white text-sm">
-                    <option value="تصميم متجر إلكتروني">تصميم وتطوير متجر إلكتروني</option>
-                    <option value="موقع تعريفي للشركة">موقع تعريفي لشركة أو نشاط</option>
-                    <option value="لوحة تحكم وإدارة مخصصة">لوحة تحكم وإدارة عمليات</option>
-                    <option value="تصميم هوية بصرية وبنرات">تصميم هوية بصرية وبنرات</option>
-                    <option value="أخرى / استشارة وتطوير مخصص">أخرى / استشارة وتطوير مخصص</option>
-                  </select>
+                  <select id="form-service" class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 focus:border-cyan-400 focus:outline-none text-white text-sm"></select>
                 </div>
                 <div>
                   <label class="block text-xs font-bold text-slate-300 mb-1.5">الباقة المفضلة</label>
-                  <select id="form-package" class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 focus:border-cyan-400 focus:outline-none text-white text-sm">
-                    <option value="باقة الانطلاقة (5,100 ج.م)">باقة الانطلاقة (5,100 ج.م)</option>
-                    <option value="باقة الاحتراف (8,500 ج.م)">باقة الاحتراف - الأكثر طلباً (8,500 ج.م)</option>
-                    <option value="باقة التوسع (12,750 ج.م)">باقة التوسع الشاملة (12,750 ج.م)</option>
-                    <option value="طلب عرض سعر مخصص">طلب عرض سعر مخصص</option>
-                  </select>
+                  <select id="form-package" class="w-full px-4 py-3 rounded-xl bg-slate-800/80 border border-slate-700 focus:border-cyan-400 focus:outline-none text-white text-sm"></select>
                 </div>
               </div>
 
@@ -685,7 +532,7 @@
           <div class="pt-4 border-t border-slate-800/80">
             <button onclick="openAdminModal()" class="text-xs px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-500/50 text-slate-400 hover:text-cyan-300 transition-all flex items-center gap-2">
               <i class="fa-solid fa-lock text-[11px]"></i>
-              <span>بوابة الإدارة والتحكم (Admin Panel)</span>
+              <span>لوحة التحكم الشاملة (Admin Panel)</span>
             </button>
           </div>
         </div>
@@ -710,18 +557,18 @@
     </a>
   </div>
 
-  <!-- ADMIN DASHBOARD MODAL SUITE -->
-  <div id="admin-modal" class="fixed inset-0 z-[999] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
-    <div class="relative w-full max-w-5xl rounded-3xl bg-[#091122] border border-blue-500/50 shadow-2xl p-6 sm:p-8 text-right my-8 max-h-[90vh] flex flex-col">
+  <!-- ADVANCED ADMIN DASHBOARD MODAL -->
+  <div id="admin-modal" class="fixed inset-0 z-[999] hidden items-center justify-center p-4 bg-black/85 backdrop-blur-md overflow-y-auto">
+    <div class="relative w-full max-w-6xl rounded-3xl bg-[#091122] border border-blue-500/50 shadow-2xl p-6 sm:p-8 text-right my-8 max-h-[92vh] flex flex-col">
       
       <div class="flex items-center justify-between pb-4 border-b border-slate-800 shrink-0">
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-blue-600/30 border border-cyan-400/40 flex items-center justify-center text-cyan-300">
-            <i class="fa-solid fa-gauge-high"></i>
+            <i class="fa-solid fa-sliders text-xl"></i>
           </div>
           <div>
-            <h3 class="text-xl font-bold font-alexandria text-white">لوحة تحكم إدارة سهلي ويب</h3>
-            <p class="text-xs text-slate-400">إدارة الباقات والأسعار، آراء العملاء، والرسائل والروابط</p>
+            <h3 class="text-xl font-bold font-alexandria text-white">لوحة تحكم إدارة سهلي ويب الشاملة</h3>
+            <p class="text-xs text-slate-400">التحكم الكلي المباشر بكافة نصوص وخدمات وباقات ومحتوى الموقع</p>
           </div>
         </div>
         <button onclick="closeAdminModal()" class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">
@@ -763,28 +610,123 @@
       <div id="admin-dashboard-view" class="hidden flex-1 overflow-y-auto pt-6 space-y-6">
         <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-800">
           <div class="flex flex-wrap items-center gap-2">
-            <button onclick="switchAdminTab('packages')" id="tab-btn-packages" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-blue-600 text-white">
-              <i class="fa-solid fa-boxes-stacked ml-1"></i> إدارة الباقات والأسعار
+            <button onclick="switchAdminTab('hero')" id="tab-btn-hero" class="admin-tab-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-blue-600 text-white">
+              <i class="fa-solid fa-wand-magic-sparkles ml-1"></i> الواجهة (Hero)
             </button>
-            <button onclick="switchAdminTab('testimonials')" id="tab-btn-testimonials" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white">
-              <i class="fa-solid fa-star ml-1"></i> آراء العملاء
+            <button onclick="switchAdminTab('services')" id="tab-btn-services" class="admin-tab-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white">
+              <i class="fa-solid fa-cubes ml-1"></i> الخدمات
             </button>
-            <button onclick="switchAdminTab('inquiries')" id="tab-btn-inquiries" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white">
-              <i class="fa-solid fa-envelope ml-1"></i> رسائل واستفسارات العملاء (<span id="inquiries-count-badge">0</span>)
+            <button onclick="switchAdminTab('packages')" id="tab-btn-packages" class="admin-tab-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white">
+              <i class="fa-solid fa-boxes-stacked ml-1"></i> الباقات
             </button>
-            <button onclick="switchAdminTab('social')" id="tab-btn-social" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white">
-              <i class="fa-solid fa-share-nodes ml-1"></i> روابط السوشيال وواتساب
+            <button onclick="switchAdminTab('calculator')" id="tab-btn-calculator" class="admin-tab-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white">
+              <i class="fa-solid fa-calculator ml-1"></i> الحاسبة
+            </button>
+            <button onclick="switchAdminTab('whyus')" id="tab-btn-whyus" class="admin-tab-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white">
+              <i class="fa-solid fa-crown ml-1"></i> لماذا نحن
+            </button>
+            <button onclick="switchAdminTab('testimonials')" id="tab-btn-testimonials" class="admin-tab-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white">
+              <i class="fa-solid fa-star ml-1"></i> الآراء
+            </button>
+            <button onclick="switchAdminTab('inquiries')" id="tab-btn-inquiries" class="admin-tab-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white">
+              <i class="fa-solid fa-envelope ml-1"></i> الرسائل (<span id="inquiries-count-badge">0</span>)
+            </button>
+            <button onclick="switchAdminTab('social')" id="tab-btn-social" class="admin-tab-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:text-white">
+              <i class="fa-solid fa-share-nodes ml-1"></i> الروابط
             </button>
           </div>
 
-          <button onclick="handleAdminLogout()" class="px-3.5 py-2 rounded-xl bg-red-950/60 hover:bg-red-900 border border-red-500/40 text-red-300 text-xs font-bold transition-colors flex items-center gap-1.5">
-            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-            <span>تسجيل الخروج</span>
-          </button>
+          <div class="flex items-center gap-2">
+            <button onclick="exportDataJSON()" title="تصدير نسخة احتياطية" class="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 text-xs font-bold transition-colors">
+              <i class="fa-solid fa-download"></i>
+            </button>
+            <button onclick="handleAdminLogout()" class="px-3.5 py-2 rounded-xl bg-red-950/60 hover:bg-red-900 border border-red-500/40 text-red-300 text-xs font-bold transition-colors flex items-center gap-1.5">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              <span>خروج</span>
+            </button>
+          </div>
         </div>
 
-        <!-- TAB 1: Packages -->
-        <div id="admin-tab-packages" class="space-y-6">
+        <!-- TAB: HERO -->
+        <div id="admin-tab-hero" class="space-y-6">
+          <h4 class="text-lg font-bold text-white">إدارة نصوص وإحصائيات الواجهة الرئيسية (Hero)</h4>
+          <form onsubmit="saveHeroSettings(event)" class="space-y-4 max-w-3xl">
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">الشارة الترويجية (Top Badge):</label>
+              <input id="hero-input-badge" type="text" required class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">العنوان الرئيسي (H1):</label>
+              <textarea id="hero-input-title" rows="2" required class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs"></textarea>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">الوصف الفرعي:</label>
+              <textarea id="hero-input-desc" rows="3" required class="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs"></textarea>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div class="p-3 bg-slate-900 rounded-xl border border-slate-800">
+                <label class="block text-[11px] text-slate-400 mb-1">الإحصائية الأولى (قيمة / نص):</label>
+                <input id="hero-input-stat1-val" type="text" required class="w-full px-3 py-1.5 rounded-lg bg-slate-800 text-white text-xs mb-1">
+                <input id="hero-input-stat1-lbl" type="text" required class="w-full px-3 py-1.5 rounded-lg bg-slate-800 text-white text-xs">
+              </div>
+              <div class="p-3 bg-slate-900 rounded-xl border border-slate-800">
+                <label class="block text-[11px] text-slate-400 mb-1">الإحصائية الثانية (قيمة / نص):</label>
+                <input id="hero-input-stat2-val" type="text" required class="w-full px-3 py-1.5 rounded-lg bg-slate-800 text-white text-xs mb-1">
+                <input id="hero-input-stat2-lbl" type="text" required class="w-full px-3 py-1.5 rounded-lg bg-slate-800 text-white text-xs">
+              </div>
+              <div class="p-3 bg-slate-900 rounded-xl border border-slate-800">
+                <label class="block text-[11px] text-slate-400 mb-1">الإحصائية الثالثة (قيمة / نص):</label>
+                <input id="hero-input-stat3-val" type="text" required class="w-full px-3 py-1.5 rounded-lg bg-slate-800 text-white text-xs mb-1">
+                <input id="hero-input-stat3-lbl" type="text" required class="w-full px-3 py-1.5 rounded-lg bg-slate-800 text-white text-xs">
+              </div>
+            </div>
+            <button type="submit" class="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-xs shadow-md">حفظ التغييرات</button>
+          </form>
+        </div>
+
+        <!-- TAB: SERVICES -->
+        <div id="admin-tab-services" class="hidden space-y-6">
+          <div class="flex items-center justify-between">
+            <h4 class="text-lg font-bold text-white">إدارة قائمة الخدمات</h4>
+            <button onclick="showAddServiceForm()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-1.5 shadow">
+              <i class="fa-solid fa-plus"></i> إضافة خدمة جديدة
+            </button>
+          </div>
+
+          <div id="service-form-container" class="hidden p-5 rounded-2xl bg-slate-900 border border-cyan-500/40 space-y-4">
+            <h5 class="text-sm font-bold text-cyan-300" id="service-form-title">إضافة خدمة جديدة</h5>
+            <form onsubmit="saveService(event)" class="space-y-3">
+              <input type="hidden" id="srv-id">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-[11px] text-slate-300 mb-1">عنوان الخدمة:</label>
+                  <input id="srv-title" type="text" required class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
+                </div>
+                <div>
+                  <label class="block text-[11px] text-slate-300 mb-1">أيقونة FontAwesome (مثال: fa-cart-shopping):</label>
+                  <input id="srv-icon" type="text" required class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs text-left" dir="ltr">
+                </div>
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-300 mb-1">وصف الخدمة:</label>
+                <textarea id="srv-desc" rows="2" required class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs"></textarea>
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-300 mb-1">المميزات الرئيسية (كل ميزة في سطر):</label>
+                <textarea id="srv-features" rows="3" required class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs"></textarea>
+              </div>
+              <div class="flex items-center gap-2 pt-2">
+                <button type="submit" class="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold">حفظ الخدمة</button>
+                <button type="button" onclick="hideServiceForm()" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 text-xs">إلغاء</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="space-y-3" id="admin-services-list"></div>
+        </div>
+
+        <!-- TAB: PACKAGES -->
+        <div id="admin-tab-packages" class="hidden space-y-6">
           <div class="flex items-center justify-between">
             <h4 class="text-lg font-bold text-white">قائمة الباقات الحالية</h4>
             <button onclick="showAddPackageForm()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-1.5 shadow">
@@ -799,28 +741,25 @@
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
                   <label class="block text-[11px] text-slate-300 mb-1">اسم الباقة:</label>
-                  <input id="pkg-name" type="text" required placeholder="باقة الانطلاقة" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
+                  <input id="pkg-name" type="text" required class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
                 </div>
                 <div>
                   <label class="block text-[11px] text-slate-300 mb-1">السعر (بالجنيه):</label>
-                  <input id="pkg-price" type="text" required placeholder="5,100" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs font-mono">
+                  <input id="pkg-price" type="text" required class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs font-mono">
                 </div>
                 <div>
                   <label class="block text-[11px] text-slate-300 mb-1">شارة الباقة (Badge):</label>
-                  <input id="pkg-badge" type="text" placeholder="الأكثر طلباً ⭐" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
+                  <input id="pkg-badge" type="text" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
                 </div>
               </div>
-
               <div>
                 <label class="block text-[11px] text-slate-300 mb-1">الوصف المختصر:</label>
-                <input id="pkg-desc" type="text" required placeholder="مثالية للمشاريع الناشئة وتجربة البيع الأولى" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
+                <input id="pkg-desc" type="text" required class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
               </div>
-
               <div>
                 <label class="block text-[11px] text-slate-300 mb-1">الميزات (افصل بين كل ميزة بسطر جديد):</label>
-                <textarea id="pkg-features" rows="4" required placeholder="متجر حتى 50 منتج&#10;طلب فوري عبر واتساب&#10;لوحة تحكم سهلة&#10;استضافة ودومين مجاني" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs"></textarea>
+                <textarea id="pkg-features" rows="4" required class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs"></textarea>
               </div>
-
               <div class="flex items-center gap-2 pt-2">
                 <button type="submit" class="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold">حفظ الباقة</button>
                 <button type="button" onclick="hidePackageForm()" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 text-xs">إلغاء</button>
@@ -831,7 +770,51 @@
           <div class="space-y-3" id="admin-packages-list"></div>
         </div>
 
-        <!-- TAB 2: Testimonials -->
+        <!-- TAB: CALCULATOR -->
+        <div id="admin-tab-calculator" class="hidden space-y-6">
+          <h4 class="text-lg font-bold text-white">إدارة خيارات وأسعار حاسبة التكلفة</h4>
+          
+          <div class="space-y-4">
+            <h5 class="text-sm font-bold text-cyan-300">أنواع المشاريع الأساسية:</h5>
+            <div id="admin-calc-types-list" class="space-y-2"></div>
+
+            <h5 class="text-sm font-bold text-cyan-300 pt-4">الميزات والإضافات:</h5>
+            <div id="admin-calc-addons-list" class="space-y-2"></div>
+          </div>
+        </div>
+
+        <!-- TAB: WHY US -->
+        <div id="admin-tab-whyus" class="hidden space-y-6">
+          <div class="flex items-center justify-between">
+            <h4 class="text-lg font-bold text-white">إدارة نقاط "لماذا سهلي ويب؟"</h4>
+            <button onclick="showAddWhyUsForm()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-1.5 shadow">
+              <i class="fa-solid fa-plus"></i> إضافة نقطة جديدة
+            </button>
+          </div>
+
+          <div id="whyus-form-container" class="hidden p-5 rounded-2xl bg-slate-900 border border-cyan-500/40 space-y-4">
+            <h5 class="text-sm font-bold text-cyan-300" id="whyus-form-title">إضافة نقطة تميز</h5>
+            <form onsubmit="saveWhyUs(event)" class="space-y-3">
+              <input type="hidden" id="wu-id">
+              <div>
+                <label class="block text-[11px] text-slate-300 mb-1">العنوان:</label>
+                <input id="wu-title" type="text" required class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
+              </div>
+              <div>
+                <label class="block text-[11px] text-slate-300 mb-1">الشرح التفصيلي:</label>
+                <textarea id="wu-desc" rows="3" required class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs"></textarea>
+              </div>
+              <div class="flex items-center gap-2 pt-2">
+                <button type="submit" class="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold">حفظ</button>
+                <button type="button" onclick="hideWhyUsForm()" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 text-xs">إلغاء</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="space-y-3" id="admin-whyus-list"></div>
+        </div>
+
+        <!-- TAB: TESTIMONIALS -->
         <div id="admin-tab-testimonials" class="hidden space-y-6">
           <div class="flex items-center justify-between">
             <h4 class="text-lg font-bold text-white">إدارة آراء وتجارب العملاء</h4>
@@ -846,11 +829,11 @@
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
                   <label class="block text-[11px] text-slate-300 mb-1">اسم العميل:</label>
-                  <input id="t-name" type="text" required placeholder="م. كريم الشناوي" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
+                  <input id="t-name" type="text" required class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
                 </div>
                 <div>
                   <label class="block text-[11px] text-slate-300 mb-1">المجال / المتجر:</label>
-                  <input id="t-business" type="text" required placeholder="متجر أزياء وإكسسوارات" class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
+                  <input id="t-business" type="text" required class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs">
                 </div>
                 <div>
                   <label class="block text-[11px] text-slate-300 mb-1">التقييم:</label>
@@ -860,12 +843,10 @@
                   </select>
                 </div>
               </div>
-
               <div>
                 <label class="block text-[11px] text-slate-300 mb-1">رأي العميل وتجربته:</label>
-                <textarea id="t-comment" rows="3" required placeholder="خدمة ممتازة وسرعة تسليم غير طبيعية..." class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs"></textarea>
+                <textarea id="t-comment" rows="3" required class="w-full px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white text-xs"></textarea>
               </div>
-
               <div class="flex items-center gap-2 pt-2">
                 <button type="submit" class="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold">إضافة الرأي</button>
                 <button type="button" onclick="hideTestimonialForm()" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 text-xs">إلغاء</button>
@@ -876,7 +857,7 @@
           <div class="space-y-3" id="admin-testimonials-list"></div>
         </div>
 
-        <!-- TAB 3: Inquiries -->
+        <!-- TAB: INQUIRIES -->
         <div id="admin-tab-inquiries" class="hidden space-y-6">
           <div class="flex items-center justify-between">
             <h4 class="text-lg font-bold text-white">الرسائل والطلبات المستلمة من الموقع</h4>
@@ -885,7 +866,7 @@
           <div id="admin-inquiries-list" class="space-y-3"></div>
         </div>
 
-        <!-- TAB 4: Social Links -->
+        <!-- TAB: SOCIAL -->
         <div id="admin-tab-social" class="hidden space-y-6">
           <h4 class="text-lg font-bold text-white">إدارة الروابط الرسمية وأرقام التواصل</h4>
           <form onsubmit="saveSocialLinks(event)" class="space-y-4 max-w-2xl">
@@ -925,6 +906,60 @@
       password: 'sigma333//'
     };
 
+    const DEFAULT_HERO = {
+      badge: 'وقف ضياع الوقت والفلوس.. المستقبل وصل مع سهلي ويب! 🚀',
+      title: 'متجرك وموقعك الإلكتروني <br class="hidden sm:inline" /> بسرعة فائقة و <span class="bg-gradient-to-l from-cyan-400 via-blue-400 to-blue-600 bg-clip-text text-transparent">بدون اشتراكات شهرية</span>',
+      desc: 'نطور لك مواقع ومتاجر إلكترونية ولوحات تحكم مخصصة تربط تلقائياً بقواعد بيانات سحابية مجانية ومدى الحياة، مع تجربة شراء فورية عبر واتساب وبوابات الدفع.',
+      stat1Val: '100%', stat1Lbl: 'بدون رسوم شهرية',
+      stat2Val: '0.3s', stat2Lbl: 'سرعة تحميل قياسية',
+      stat3Val: '24/7', stat3Lbl: 'دعم فني واستشارات'
+    };
+
+    const DEFAULT_SERVICES = [
+      {
+        id: 's1', icon: 'fa-cart-shopping', title: 'تصميم المتاجر الإلكترونية',
+        desc: 'متاجر فائقة السرعة، متوافقة مع كل الأجهزة، طلب فوري بنقرة واحدة عبر واتساب أو بوابات دفع، وبدون أي عمولات أو اشتراكات شهرية.',
+        features: ['ربط بكسل فيسبوك وتيك توك', 'سلة شراء تفاعلية وسريعة', 'حساب تكلفة الشحن للمحافظات']
+      },
+      {
+        id: 's2', icon: 'fa-building', title: 'المواقع التعريفية والشركات',
+        desc: 'موقع تعريفي يعكس فخامة علامتك التجارية، ويعزز مصداقيتك أمام المستثمرين والعملاء بأحدث أساليب التصميم العالمي.',
+        features: ['تهيئة محركات البحث (SEO)', 'استعراض سابقة الأعمال والخدمات', 'نماذج استفسار وحجز متقدمة']
+      },
+      {
+        id: 's3', icon: 'fa-chart-line', title: 'لوحات التحكم والإدارة',
+        desc: 'لوحة تحكم مبسطة وسلسة باللغة العربية تمكنك من إضافة وتعديل المنتجات، متابعة الطلبات، وإدارة المخزون من هاتفك أو حاسوبك بسهولة.',
+        features: ['إدارة سهلة للمنتجات والأسعار', 'تقارير وإحصائيات المبيعات', 'صلاحيات مستخدمين متعددة']
+      },
+      {
+        id: 's4', icon: 'fa-palette', title: 'الهوية البصرية والبنرات',
+        desc: 'تصاميم إعلانية وبنرات متجر وهوية بصرية تجذب العملاء وترفع معدل التحويل لزيادة المبيعات بشكل ملحوظ.',
+        features: ['بنرات متحركة وثابتة عالية الدقة', 'تصميم شعار وهوية متناسقة', 'قوالب سوشيال ميديا جاهزة']
+      }
+    ];
+
+    const DEFAULT_CALC_TYPES = [
+      { id: 'store', name: 'متجر إلكتروني للمنتجات', price: 5100 },
+      { id: 'corporate', name: 'موقع تعريفي لشركة', price: 4500 },
+      { id: 'custom', name: 'لوحة تحكم ونظام مخصص', price: 8000 }
+    ];
+
+    const DEFAULT_CALC_ADDONS = [
+      { id: 'a1', name: 'بوابة دفع إلكتروني (فيزا / فودافون كاش)', price: 1200 },
+      { id: 'a2', name: 'دعم لغتين (عربي + إنجليزي)', price: 1500 },
+      { id: 'a3', name: 'باقة بنرات إعلانية وتصميم هوية', price: 850 },
+      { id: 'a4', name: 'ربط وتجهيز بكسل الإعلانات (Meta & TikTok)', price: 600 }
+    ];
+
+    const DEFAULT_WHYUS = [
+      { id: 'w1', title: 'إلغاء الاشتراكات الشهرية تماماً', desc: 'وفر آلاف الجنيهات التي تدفعها للمنصات الأخرى. متجرك ملكك بالكامل بدون رسوم شهرية أو سنوية إجبارية.' },
+      { id: 'w2', title: 'سرعة تحميل خارقة (0.3 ثانية)', desc: 'نبني مواقعنا بأحدث تقنيات الويب العالمية لضمان سرعة فائقة تمنع مغادرة العميل وتزيد مبيعاتك بنسبة تتجاوز 40%.' },
+      { id: 'w3', title: 'لوحة تحكم عربية فائقة السهولة', desc: 'تستطيع إضافة المنتجات، وتعديل الأسعار والخصومات، وتلقي الطلبات بضغطة زر وبدون الحاجة لأي خبرة برمجية.' },
+      { id: 'w4', title: 'قواعد بيانات سحابية مجانية مدى الحياة', desc: 'نربط متجرك بسيرفرات وقواعد بيانات سحابية مشفرة وسريعة لا تكلفك أي مصاريف استضافة إضافية لبياناتك.' },
+      { id: 'w5', title: 'تصميم مخصص وتجربة مستخدم فاخرة', desc: 'لا نستخدم قوالب مكررة. كل متجر يتم تصميمه بما يبرز هويتك الفريدة ويجعل عميلك يشعر بالثقة الفورية للشراء.' },
+      { id: 'w6', title: 'دعم فني وتدريب كامل', desc: 'نسلمك المتجر مع فيديو تدريبي خطوة بخطوة، مع دعم فني متواصل للإجابة على كل استفساراتك في أي وقت.' }
+    ];
+
     const DEFAULT_SOCIAL_LINKS = {
       tiktok: 'https://tiktok.com/@sahlyweb',
       youtube: 'https://youtube.com/@SahlyWeb',
@@ -935,80 +970,26 @@
 
     const DEFAULT_PACKAGES = [
       {
-        id: 'starter',
-        name: 'باقة الانطلاقة (Starter)',
-        price: '5,100',
-        badge: 'الأفضل للبداية 🚀',
-        isPopular: false,
+        id: 'starter', name: 'باقة الانطلاقة (Starter)', price: '5,100', badge: 'الأفضل للبداية 🚀', isPopular: false,
         desc: 'الحل الأمثل لإطلاق متجرك أو نشاطك التجاري والبدء في استلام أولى طلباتك بسرعة واحترافية.',
-        features: [
-          'متجر إلكتروني سريع حتى 50 منتج',
-          'استقبال الطلبات الفورية بنقرة عبر WhatsApp',
-          'لوحة تحكم سهلة وسريعة باللغة العربية',
-          'تصميم مخصص بالكامل متوافق مع الموبايل',
-          'استضافة سحابية فائقة السرعة ودومين مجاني',
-          'ربط بكسل فيسبوك وتيك توك لتتبع المبيعات',
-          'دعم فني وتدريب مجاني لمدة شهر'
-        ]
+        features: ['متجر إلكتروني سريع حتى 50 منتج', 'استقبال الطلبات الفورية بنقرة عبر WhatsApp', 'لوحة تحكم سهلة وسريعة باللغة العربية', 'تصميم مخصص بالكامل متوافق مع الموبايل', 'استضافة سحابية فائقة السرعة ودومين مجاني', 'ربط بكسل فيسبوك وتيك توك لتتبع المبيعات', 'دعم فني وتدريب مجاني لمدة شهر']
       },
       {
-        id: 'pro',
-        name: 'باقة الاحتراف (Pro)',
-        price: '8,500',
-        badge: 'الأكثر طلباً واختياراً ⭐',
-        isPopular: true,
+        id: 'pro', name: 'باقة الاحتراف (Pro)', price: '8,500', badge: 'الأكثر طلباً واختياراً ⭐', isPopular: true,
         desc: 'الباقة المتكاملة للعلامات التجارية والمتاجر التي تستهدف نمواً سريعاً ومبيعات يومية مضاعفة.',
-        features: [
-          'متجر إلكتروني متقدم حتى 200 منتج',
-          'سلة شراء ذكية ومتقدمة بدون رسوم شهرية',
-          'باقة 3 بنرات إعلانية وتصميم هوية بصرية كاملة',
-          'تهيئة متقدمة لمحركات البحث (SEO)',
-          'نظام تتبع مباشر لحالة الشحن والطلبات',
-          'ربط كافة منصات الإعلانات (Pixel & CAPI)',
-          'دعم فني وتحديثات مستمرة لمدة 3 أشهر'
-        ]
+        features: ['متجر إلكتروني متقدم حتى 200 منتج', 'سلة شراء ذكية ومتقدمة بدون رسوم شهرية', 'باقة 3 بنرات إعلانية وتصميم هوية بصرية كاملة', 'تهيئة متقدمة لمحركات البحث (SEO)', 'نظام تتبع مباشر لحالة الشحن والطلبات', 'ربط كافة منصات الإعلانات (Pixel & CAPI)', 'دعم فني وتحديثات مستمرة لمدة 3 أشهر']
       },
       {
-        id: 'enterprise',
-        name: 'باقة التوسع (Enterprise)',
-        price: '12,750',
-        badge: 'أعلى أداء وميزات 💎',
-        isPopular: false,
+        id: 'enterprise', name: 'باقة التوسع (Enterprise)', price: '12,750', badge: 'أعلى أداء وميزات 💎', isPopular: false,
         desc: 'حل برمجي مؤسسي شامل بدون أي قيود مع بوابات دفع إلكتروني متعددة وأنظمة أتمتة مبيعات.',
-        features: [
-          'متجر متكامل بمنتجات غير محدودة (Unlimited)',
-          'ربط وتفعيل بوابات الدفع الإلكتروني (فيزا / فودافون كاش)',
-          'حساب تلقائي لتكلفة الشحن حسب المحافظات والمدن',
-          'لوحة تحكم وإدارة مخزون وحسابات متقدمة',
-          'تطبيق ويب تقدمي (PWA) سريع للتحميل على الهواتف',
-          'تصميم هوية بصرية وبنرات حصرية بالكامل',
-          'دعم فني مخصص وأولوية على مدار 6 أشهر'
-        ]
+        features: ['متجر متكامل بمنتجات غير محدودة (Unlimited)', 'ربط وتفعيل بوابات الدفع الإلكتروني (فيزا / فودافون كاش)', 'حساب تلقائي لتكلفة الشحن حسب المحافظات والمدن', 'لوحة تحكم وإدارة مخزون وحسابات متقدمة', 'تطبيق ويب تقدمي (PWA) سريع للتحميل على الهواتف', 'تصميم هوية بصرية وبنرات حصرية بالكامل', 'دعم فني مخصص وأولوية على مدار 6 أشهر']
       }
     ];
 
     const DEFAULT_TESTIMONIALS = [
-      {
-        id: '1',
-        name: 'م. أحمد سمير',
-        business: 'مؤسس متجر Trendy Wear',
-        comment: 'تجربة ممتازة مع سهلي ويب! المتجر سريع جداً وطلبات الواتساب زادت بنسبة 60% بفضل سهولة إتمام الشراء وسرعة الموقع.',
-        rating: 5
-      },
-      {
-        id: '2',
-        name: 'سارة عبد الرحمن',
-        business: 'براند مستحضرات تجميل',
-        comment: 'أفضل استثمار عملته لمشروعي! ارتحت تماماً من الاشتراكات الشهرية المرهقة للمنصات، ولوحة التحكم سهلة جداً من الموبايل.',
-        rating: 5
-      },
-      {
-        id: '3',
-        name: 'كريم الشناوي',
-        business: 'شركة أجهزة وإلكترونيات',
-        comment: 'تسليم في الموعد بالضبط مع كود نظيف وتصميم فاخر جداً. الدعم الفني متجاوب في أي وقت وساعدوني في كل خطوة.',
-        rating: 5
-      }
+      { id: '1', name: 'م. أحمد سمير', business: 'مؤسس متجر Trendy Wear', comment: 'تجربة ممتازة مع سهلي ويب! المتجر سريع جداً وطلبات الواتساب زادت بنسبة 60% بفضل سهولة إتمام الشراء وسرعة الموقع.', rating: 5 },
+      { id: '2', name: 'سارة عبد الرحمن', business: 'براند مستحضرات تجميل', comment: 'أفضل استثمار عملته لمشروعي! ارتحت تماماً من الاشتراكات الشهرية المرهقة للمنصات، ولوحة التحكم سهلة جداً من الموبايل.', rating: 5 },
+      { id: '3', name: 'كريم الشناوي', business: 'شركة أجهزة وإلكترونيات', comment: 'تسليم في الموعد بالضبط مع كود نظيف وتصميم فاخر جداً. الدعم الفني متجاوب في أي وقت وساعدوني في كل خطوة.', rating: 5 }
     ];
 
     function getStoredData(key, defaultVal) {
@@ -1024,7 +1005,12 @@
       localStorage.setItem(key, JSON.stringify(val));
     }
 
+    let appHero = getStoredData('sahly_hero', DEFAULT_HERO);
+    let appServices = getStoredData('sahly_services', DEFAULT_SERVICES);
     let appPackages = getStoredData('sahly_packages', DEFAULT_PACKAGES);
+    let appCalcTypes = getStoredData('sahly_calc_types', DEFAULT_CALC_TYPES);
+    let appCalcAddons = getStoredData('sahly_calc_addons', DEFAULT_CALC_ADDONS);
+    let appWhyUs = getStoredData('sahly_whyus', DEFAULT_WHYUS);
     let appTestimonials = getStoredData('sahly_testimonials', DEFAULT_TESTIMONIALS);
     let appSocial = getStoredData('sahly_social', DEFAULT_SOCIAL_LINKS);
     let appInquiries = getStoredData('sahly_inquiries', []);
@@ -1046,8 +1032,48 @@
       }, 3500);
     }
 
+    function renderHero() {
+      document.getElementById('display-hero-badge').innerHTML = appHero.badge;
+      document.getElementById('display-hero-title').innerHTML = appHero.title;
+      document.getElementById('display-hero-desc').innerHTML = appHero.desc;
+      document.getElementById('display-stat-1-val').innerText = appHero.stat1Val;
+      document.getElementById('display-stat-1-lbl').innerText = appHero.stat1Lbl;
+      document.getElementById('display-stat-2-val').innerText = appHero.stat2Val;
+      document.getElementById('display-stat-2-lbl').innerText = appHero.stat2Lbl;
+      document.getElementById('display-stat-3-val').innerText = appHero.stat3Val;
+      document.getElementById('display-stat-3-lbl').innerText = appHero.stat3Lbl;
+    }
+
+    function renderServices() {
+      const container = document.getElementById('services-grid');
+      const formSelect = document.getElementById('form-service');
+      
+      container.innerHTML = appServices.map(srv => `
+        <div class="rounded-3xl p-7 bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/60 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(0,102,255,0.2)] flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-blue-600/20 text-cyan-400 border border-blue-500/30 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+              <i class="fa-solid ${srv.icon}"></i>
+            </div>
+            <h3 class="text-xl font-bold font-alexandria text-white mb-3">${srv.title}</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">${srv.desc}</p>
+            <ul class="text-xs text-slate-400 space-y-1.5 mb-6">
+              ${srv.features.map(f => `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-cyan-400"></i> ${f}</li>`).join('')}
+            </ul>
+          </div>
+          <button onclick="selectServiceForContact('${srv.title}')" class="w-full py-2.5 rounded-xl bg-blue-950 hover:bg-blue-600 text-cyan-300 hover:text-white border border-blue-800 font-bold text-xs transition-colors flex items-center justify-center gap-2">
+            <span>طلب الخدمة</span>
+            <i class="fa-solid fa-arrow-left text-[10px]"></i>
+          </button>
+        </div>
+      `).join('');
+
+      formSelect.innerHTML = appServices.map(s => `<option value="${s.title}">${s.title}</option>`).join('') + `<option value="أخرى / استشارة وتطوير مخصص">أخرى / استشارة وتطوير مخصص</option>`;
+    }
+
     function renderPackages() {
       const container = document.getElementById('packages-grid');
+      const formSelect = document.getElementById('form-package');
+
       container.innerHTML = appPackages.map(pkg => {
         const isPop = pkg.isPopular;
         return `
@@ -1095,6 +1121,62 @@
           </div>
         `;
       }).join('');
+
+      formSelect.innerHTML = appPackages.map(p => `<option value="${p.name} (${p.price} ج.م)">${p.name} (${p.price} ج.م)</option>`).join('') + `<option value="طلب عرض سعر مخصص">طلب عرض سعر مخصص</option>`;
+    }
+
+    let calcSelectedTypePrice = 0;
+    function renderCalculator() {
+      const typesContainer = document.getElementById('calc-types-container');
+      const addonsContainer = document.getElementById('calc-addons-container');
+
+      if (appCalcTypes.length > 0 && calcSelectedTypePrice === 0) {
+        calcSelectedTypePrice = appCalcTypes[0].price;
+      }
+
+      typesContainer.innerHTML = appCalcTypes.map((t, idx) => `
+        <button type="button" onclick="setCalcProjectType(${t.price}, this)" class="calc-type-btn ${idx === 0 ? 'active-calc-btn border-cyan-400 bg-blue-950/80 text-cyan-300' : 'border-slate-700 bg-slate-800/60 text-slate-300'} p-3.5 rounded-xl border font-bold text-xs sm:text-sm text-center transition-all">
+          ${t.name}
+        </button>
+      `).join('');
+
+      addonsContainer.innerHTML = appCalcAddons.map(a => `
+        <label class="flex items-center justify-between p-3.5 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-blue-500 cursor-pointer">
+          <span class="text-xs sm:text-sm text-slate-200">${a.name}</span>
+          <input type="checkbox" value="${a.price}" onchange="recalculateCost()" class="calc-addon w-4 h-4 text-blue-600 rounded bg-slate-900 border-slate-700 focus:ring-0">
+        </label>
+      `).join('');
+
+      recalculateCost();
+    }
+
+    function setCalcProjectType(price, btnEl) {
+      calcSelectedTypePrice = price;
+      document.querySelectorAll('.calc-type-btn').forEach(b => {
+        b.classList.remove('active-calc-btn', 'border-cyan-400', 'bg-blue-950/80', 'text-cyan-300');
+        b.classList.add('border-slate-700', 'bg-slate-800/60', 'text-slate-300');
+      });
+      btnEl.classList.add('active-calc-btn', 'border-cyan-400', 'bg-blue-950/80', 'text-cyan-300');
+      recalculateCost();
+    }
+
+    function recalculateCost() {
+      let total = calcSelectedTypePrice;
+      document.querySelectorAll('.calc-addon:checked').forEach(addon => {
+        total += parseInt(addon.value);
+      });
+      document.getElementById('calc-total-price').innerText = `${total.toLocaleString('ar-EG')} ج.م`;
+    }
+
+    function renderWhyUs() {
+      const container = document.getElementById('whyus-grid');
+      container.innerHTML = appWhyUs.map((item, idx) => `
+        <div class="p-7 rounded-3xl bg-slate-900/80 border border-blue-900/40 hover:border-cyan-400/50 transition-all text-right">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl mb-4 font-mono font-bold">${String(idx + 1).padStart(2, '0')}</div>
+          <h3 class="text-lg font-bold text-white mb-2 font-alexandria">${item.title}</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">${item.desc}</p>
+        </div>
+      `).join('');
     }
 
     function renderTestimonials() {
@@ -1159,28 +1241,9 @@
       `;
     }
 
-    let calcBasePrice = 5100;
-    function setCalcProjectType(type, price, btnEl) {
-      calcBasePrice = price;
-      document.querySelectorAll('.calc-type-btn').forEach(b => {
-        b.classList.remove('active-calc-btn', 'border-cyan-400', 'bg-blue-950/80', 'text-cyan-300');
-        b.classList.add('border-slate-700', 'bg-slate-800/60', 'text-slate-300');
-      });
-      btnEl.classList.add('active-calc-btn', 'border-cyan-400', 'bg-blue-950/80', 'text-cyan-300');
-      recalculateCost();
-    }
-
-    function recalculateCost() {
-      let total = calcBasePrice;
-      document.querySelectorAll('.calc-addon:checked').forEach(addon => {
-        total += parseInt(addon.value);
-      });
-      document.getElementById('calc-total-price').innerText = `${total.toLocaleString('ar-EG')} ج.م`;
-    }
-
     function sendCalculatedQuoteToWhatsApp() {
       const priceText = document.getElementById('calc-total-price').innerText;
-      const text = `مرحباً سهلي ويب 🚀\nقمت بحساب تكلفة مشروعي عبر الحاسبة التفاعلية وكانت النتيجة: ${priceText}.\nأرغب في مناقشة تفاصيل التنفيذ وبدء المشروع معكم.`;
+      const text = `مرحباً سهلي ويب 🚀\nقمت بحساب تكلفة مشروعي عبر الحاسبة التفاعلية وكان التقدير: ${priceText}.\nأرغب في مناقشة تفاصيل التنفيذ وبدء العمل معكم.`;
       window.open(`https://wa.me/${appSocial.whatsapp}?text=${encodeURIComponent(text)}`, '_blank');
     }
 
@@ -1257,8 +1320,12 @@
     function showAdminDashboard() {
       document.getElementById('admin-login-view').classList.add('hidden');
       document.getElementById('admin-dashboard-view').classList.remove('hidden');
-      switchAdminTab('packages');
+      switchAdminTab('hero');
+      loadHeroForm();
+      renderAdminServices();
       renderAdminPackages();
+      renderAdminCalculator();
+      renderAdminWhyUs();
       renderAdminTestimonials();
       renderAdminInquiries();
       loadSocialForm();
@@ -1287,29 +1354,140 @@
     }
 
     function switchAdminTab(tabName) {
-      ['packages', 'testimonials', 'inquiries', 'social'].forEach(t => {
+      ['hero', 'services', 'packages', 'calculator', 'whyus', 'testimonials', 'inquiries', 'social'].forEach(t => {
         document.getElementById(`admin-tab-${t}`).classList.add('hidden');
         const btn = document.getElementById(`tab-btn-${t}`);
-        btn.classList.remove('bg-blue-600', 'text-white');
-        btn.classList.add('bg-slate-800', 'text-slate-300');
+        if(btn) {
+          btn.classList.remove('bg-blue-600', 'text-white');
+          btn.classList.add('bg-slate-800', 'text-slate-300');
+        }
       });
 
       document.getElementById(`admin-tab-${tabName}`).classList.remove('hidden');
       const activeBtn = document.getElementById(`tab-btn-${tabName}`);
-      activeBtn.classList.add('bg-blue-600', 'text-white');
-      activeBtn.classList.remove('bg-slate-800', 'text-slate-300');
+      if(activeBtn) {
+        activeBtn.classList.add('bg-blue-600', 'text-white');
+        activeBtn.classList.remove('bg-slate-800', 'text-slate-300');
+      }
     }
 
+    /* Admin Hero Logic */
+    function loadHeroForm() {
+      document.getElementById('hero-input-badge').value = appHero.badge;
+      document.getElementById('hero-input-title').value = appHero.title;
+      document.getElementById('hero-input-desc').value = appHero.desc;
+      document.getElementById('hero-input-stat1-val').value = appHero.stat1Val;
+      document.getElementById('hero-input-stat1-lbl').value = appHero.stat1Lbl;
+      document.getElementById('hero-input-stat2-val').value = appHero.stat2Val;
+      document.getElementById('hero-input-stat2-lbl').value = appHero.stat2Lbl;
+      document.getElementById('hero-input-stat3-val').value = appHero.stat3Val;
+      document.getElementById('hero-input-stat3-lbl').value = appHero.stat3Lbl;
+    }
+
+    function saveHeroSettings(e) {
+      e.preventDefault();
+      appHero = {
+        badge: document.getElementById('hero-input-badge').value,
+        title: document.getElementById('hero-input-title').value,
+        desc: document.getElementById('hero-input-desc').value,
+        stat1Val: document.getElementById('hero-input-stat1-val').value,
+        stat1Lbl: document.getElementById('hero-input-stat1-lbl').value,
+        stat2Val: document.getElementById('hero-input-stat2-val').value,
+        stat2Lbl: document.getElementById('hero-input-stat2-lbl').value,
+        stat3Val: document.getElementById('hero-input-stat3-val').value,
+        stat3Lbl: document.getElementById('hero-input-stat3-lbl').value,
+      };
+      setStoredData('sahly_hero', appHero);
+      renderHero();
+      showToast('تم تحديث بيانات الواجهة الرئيسية!');
+    }
+
+    /* Admin Services Logic */
+    function renderAdminServices() {
+      document.getElementById('admin-services-list').innerHTML = appServices.map(srv => `
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid ${srv.icon} text-cyan-400 text-xl"></i>
+            <div>
+              <strong class="text-sm text-white">${srv.title}</strong>
+              <p class="text-xs text-slate-400 mt-0.5">${srv.desc.substring(0, 70)}...</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="editService('${srv.id}')" class="p-2 rounded-lg bg-blue-950 text-cyan-300 hover:bg-blue-600 hover:text-white transition-colors"><i class="fa-solid fa-pen-to-square text-xs"></i></button>
+            <button onclick="deleteService('${srv.id}')" class="p-2 rounded-lg bg-red-950 text-red-300 hover:bg-red-600 hover:text-white transition-colors"><i class="fa-solid fa-trash text-xs"></i></button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function showAddServiceForm() {
+      document.getElementById('service-form-container').classList.remove('hidden');
+      document.getElementById('service-form-title').innerText = 'إضافة خدمة جديدة';
+      document.getElementById('srv-id').value = '';
+      document.getElementById('srv-title').value = '';
+      document.getElementById('srv-icon').value = 'fa-cube';
+      document.getElementById('srv-desc').value = '';
+      document.getElementById('srv-features').value = '';
+    }
+
+    function hideServiceForm() {
+      document.getElementById('service-form-container').classList.add('hidden');
+    }
+
+    function editService(id) {
+      const srv = appServices.find(s => s.id === id);
+      if(!srv) return;
+      document.getElementById('service-form-container').classList.remove('hidden');
+      document.getElementById('service-form-title').innerText = 'تعديل الخدمة';
+      document.getElementById('srv-id').value = srv.id;
+      document.getElementById('srv-title').value = srv.title;
+      document.getElementById('srv-icon').value = srv.icon;
+      document.getElementById('srv-desc').value = srv.desc;
+      document.getElementById('srv-features').value = srv.features.join('\n');
+    }
+
+    function saveService(e) {
+      e.preventDefault();
+      const id = document.getElementById('srv-id').value;
+      const title = document.getElementById('srv-title').value;
+      const icon = document.getElementById('srv-icon').value;
+      const desc = document.getElementById('srv-desc').value;
+      const features = document.getElementById('srv-features').value.split('\n').filter(f => f.trim() !== '');
+
+      if(id) {
+        const idx = appServices.findIndex(s => s.id === id);
+        if(idx !== -1) appServices[idx] = { id, icon, title, desc, features };
+      } else {
+        appServices.push({ id: 's_' + Date.now(), icon, title, desc, features });
+      }
+
+      setStoredData('sahly_services', appServices);
+      renderServices();
+      renderAdminServices();
+      hideServiceForm();
+      showToast('تم حفظ الخدمة بنجاح!');
+    }
+
+    function deleteService(id) {
+      if(!confirm('هل أنت تأكد من حذف هذه الخدمة؟')) return;
+      appServices = appServices.filter(s => s.id !== id);
+      setStoredData('sahly_services', appServices);
+      renderServices();
+      renderAdminServices();
+      showToast('تم حذف الخدمة.');
+    }
+
+    /* Admin Packages Logic */
     function renderAdminPackages() {
       document.getElementById('admin-packages-list').innerHTML = appPackages.map(pkg => `
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between gap-4">
           <div>
             <div class="flex items-center gap-2">
               <strong class="text-sm text-white">${pkg.name}</strong>
-              <span class="text-xs font-mono text-cyan-400 font-bold">${pkg.price} ج.م</span>
-              ${pkg.badge ? `<span class="text-[10px] px-2 py-0.5 rounded bg-blue-950 text-cyan-300">${pkg.badge}</span>` : ''}
+              <span class="text-xs text-cyan-400 font-mono font-bold">(${pkg.price} ج.م)</span>
             </div>
-            <p class="text-xs text-slate-400 mt-1">${pkg.desc}</p>
+            <p class="text-xs text-slate-400 mt-0.5">${pkg.desc}</p>
           </div>
           <div class="flex items-center gap-2">
             <button onclick="editPackage('${pkg.id}')" class="p-2 rounded-lg bg-blue-950 text-cyan-300 hover:bg-blue-600 hover:text-white transition-colors"><i class="fa-solid fa-pen-to-square text-xs"></i></button>
@@ -1336,7 +1514,7 @@
 
     function editPackage(id) {
       const pkg = appPackages.find(p => p.id === id);
-      if (!pkg) return;
+      if(!pkg) return;
       document.getElementById('package-form-container').classList.remove('hidden');
       document.getElementById('package-form-title').innerText = 'تعديل الباقة';
       document.getElementById('pkg-id').value = pkg.id;
@@ -1349,18 +1527,19 @@
 
     function savePackage(e) {
       e.preventDefault();
-      const id = document.getElementById('pkg-id').value || Date.now().toString();
+      const id = document.getElementById('pkg-id').value;
       const name = document.getElementById('pkg-name').value;
       const price = document.getElementById('pkg-price').value;
       const badge = document.getElementById('pkg-badge').value;
       const desc = document.getElementById('pkg-desc').value;
       const features = document.getElementById('pkg-features').value.split('\n').filter(f => f.trim() !== '');
 
-      const pkgIndex = appPackages.findIndex(p => p.id === id);
-      const pkgData = { id, name, price, badge, desc, features, isPopular: badge.includes('طلب') };
-
-      if (pkgIndex > -1) appPackages[pkgIndex] = pkgData;
-      else appPackages.push(pkgData);
+      if(id) {
+        const idx = appPackages.findIndex(p => p.id === id);
+        if(idx !== -1) appPackages[idx] = { ...appPackages[idx], name, price, badge, desc, features };
+      } else {
+        appPackages.push({ id: 'pkg_' + Date.now(), name, price, badge, isPopular: false, desc, features });
+      }
 
       setStoredData('sahly_packages', appPackages);
       renderPackages();
@@ -1370,7 +1549,7 @@
     }
 
     function deletePackage(id) {
-      if (!confirm('هل أنت تأكد من حذف هذه الباقة؟')) return;
+      if(!confirm('هل أنت تأكد من حذف هذه الباقة؟')) return;
       appPackages = appPackages.filter(p => p.id !== id);
       setStoredData('sahly_packages', appPackages);
       renderPackages();
@@ -1378,6 +1557,111 @@
       showToast('تم حذف الباقة.');
     }
 
+    /* Admin Calculator Logic */
+    function renderAdminCalculator() {
+      document.getElementById('admin-calc-types-list').innerHTML = appCalcTypes.map((t, idx) => `
+        <div class="p-3 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-between">
+          <span class="text-xs text-white font-bold">${t.name}</span>
+          <div class="flex items-center gap-2">
+            <input type="number" value="${t.price}" onchange="updateCalcTypePrice(${idx}, this.value)" class="w-24 px-2 py-1 rounded bg-slate-800 border border-slate-700 text-cyan-300 text-xs font-mono">
+            <span class="text-[11px] text-slate-400">ج.م</span>
+          </div>
+        </div>
+      `).join('');
+
+      document.getElementById('admin-calc-addons-list').innerHTML = appCalcAddons.map((a, idx) => `
+        <div class="p-3 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-between">
+          <span class="text-xs text-white font-bold">${a.name}</span>
+          <div class="flex items-center gap-2">
+            <input type="number" value="${a.price}" onchange="updateCalcAddonPrice(${idx}, this.value)" class="w-24 px-2 py-1 rounded bg-slate-800 border border-slate-700 text-cyan-300 text-xs font-mono">
+            <span class="text-[11px] text-slate-400">ج.م</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function updateCalcTypePrice(index, newPrice) {
+      appCalcTypes[index].price = parseInt(newPrice) || 0;
+      setStoredData('sahly_calc_types', appCalcTypes);
+      renderCalculator();
+      showToast('تم تحديث سعر خيار الحاسبة!');
+    }
+
+    function updateCalcAddonPrice(index, newPrice) {
+      appCalcAddons[index].price = parseInt(newPrice) || 0;
+      setStoredData('sahly_calc_addons', appCalcAddons);
+      renderCalculator();
+      showToast('تم تحديث سعر الإضافة!');
+    }
+
+    /* Admin WhyUs Logic */
+    function renderAdminWhyUs() {
+      document.getElementById('admin-whyus-list').innerHTML = appWhyUs.map(item => `
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between gap-4">
+          <div>
+            <strong class="text-sm text-white">${item.title}</strong>
+            <p class="text-xs text-slate-400 mt-0.5">${item.desc}</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="editWhyUs('${item.id}')" class="p-2 rounded-lg bg-blue-950 text-cyan-300 hover:bg-blue-600 hover:text-white transition-colors"><i class="fa-solid fa-pen-to-square text-xs"></i></button>
+            <button onclick="deleteWhyUs('${item.id}')" class="p-2 rounded-lg bg-red-950 text-red-300 hover:bg-red-600 hover:text-white transition-colors"><i class="fa-solid fa-trash text-xs"></i></button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function showAddWhyUsForm() {
+      document.getElementById('whyus-form-container').classList.remove('hidden');
+      document.getElementById('whyus-form-title').innerText = 'إضافة نقطة تميز';
+      document.getElementById('wu-id').value = '';
+      document.getElementById('wu-title').value = '';
+      document.getElementById('wu-desc').value = '';
+    }
+
+    function hideWhyUsForm() {
+      document.getElementById('whyus-form-container').classList.add('hidden');
+    }
+
+    function editWhyUs(id) {
+      const item = appWhyUs.find(w => w.id === id);
+      if(!item) return;
+      document.getElementById('whyus-form-container').classList.remove('hidden');
+      document.getElementById('whyus-form-title').innerText = 'تعديل نقطة التميز';
+      document.getElementById('wu-id').value = item.id;
+      document.getElementById('wu-title').value = item.title;
+      document.getElementById('wu-desc').value = item.desc;
+    }
+
+    function saveWhyUs(e) {
+      e.preventDefault();
+      const id = document.getElementById('wu-id').value;
+      const title = document.getElementById('wu-title').value;
+      const desc = document.getElementById('wu-desc').value;
+
+      if(id) {
+        const idx = appWhyUs.findIndex(w => w.id === id);
+        if(idx !== -1) appWhyUs[idx] = { id, title, desc };
+      } else {
+        appWhyUs.push({ id: 'wu_' + Date.now(), title, desc });
+      }
+
+      setStoredData('sahly_whyus', appWhyUs);
+      renderWhyUs();
+      renderAdminWhyUs();
+      hideWhyUsForm();
+      showToast('تم الحفظ بنجاح!');
+    }
+
+    function deleteWhyUs(id) {
+      if(!confirm('هل أنت تأكد من الحذف؟')) return;
+      appWhyUs = appWhyUs.filter(w => w.id !== id);
+      setStoredData('sahly_whyus', appWhyUs);
+      renderWhyUs();
+      renderAdminWhyUs();
+      showToast('تم الحذف.');
+    }
+
+    /* Admin Testimonials Logic */
     function renderAdminTestimonials() {
       document.getElementById('admin-testimonials-list').innerHTML = appTestimonials.map(t => `
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between gap-4">
@@ -1385,84 +1669,83 @@
             <div class="flex items-center gap-2">
               <strong class="text-sm text-white">${t.name}</strong>
               <span class="text-xs text-slate-400">(${t.business})</span>
-              <span class="text-amber-400 text-xs">${'⭐'.repeat(t.rating)}</span>
             </div>
-            <p class="text-xs text-slate-300 mt-1 italic">"${t.comment}"</p>
+            <p class="text-xs text-slate-300 mt-1 italic font-serif">"${t.comment}"</p>
           </div>
-          <button onclick="deleteTestimonial('${t.id}')" class="p-2 rounded-lg bg-red-950 text-red-300 hover:bg-red-600 hover:text-white transition-colors"><i class="fa-solid fa-trash text-xs"></i></button>
+          <button onclick="deleteTestimonial('${t.id}')" class="p-2 rounded-lg bg-red-950 text-red-300 hover:bg-red-600 hover:text-white transition-colors shrink-0"><i class="fa-solid fa-trash text-xs"></i></button>
         </div>
       `).join('');
     }
 
     function showAddTestimonialForm() {
       document.getElementById('testimonial-form-container').classList.remove('hidden');
+      document.getElementById('t-name').value = '';
+      document.getElementById('t-business').value = '';
+      document.getElementById('t-comment').value = '';
     }
+
     function hideTestimonialForm() {
       document.getElementById('testimonial-form-container').classList.add('hidden');
     }
 
     function saveTestimonial(e) {
       e.preventDefault();
-      const newT = {
-        id: Date.now().toString(),
-        name: document.getElementById('t-name').value,
-        business: document.getElementById('t-business').value,
-        rating: parseInt(document.getElementById('t-rating').value),
-        comment: document.getElementById('t-comment').value
-      };
-      appTestimonials.unshift(newT);
+      const name = document.getElementById('t-name').value;
+      const business = document.getElementById('t-business').value;
+      const rating = parseInt(document.getElementById('t-rating').value);
+      const comment = document.getElementById('t-comment').value;
+
+      appTestimonials.push({ id: 't_' + Date.now(), name, business, rating, comment });
       setStoredData('sahly_testimonials', appTestimonials);
       renderTestimonials();
       renderAdminTestimonials();
       hideTestimonialForm();
-      showToast('تمت إضافة التقييم بنجاح!');
+      showToast('تم إضافة رأي العميل!');
     }
 
     function deleteTestimonial(id) {
+      if(!confirm('هل أنت تأكد من حذف التقييم؟')) return;
       appTestimonials = appTestimonials.filter(t => t.id !== id);
       setStoredData('sahly_testimonials', appTestimonials);
       renderTestimonials();
       renderAdminTestimonials();
-      showToast('تم حذف التقييم.');
+      showToast('تم الحذف.');
     }
 
+    /* Admin Inquiries Logic */
     function renderAdminInquiries() {
-      const badge = document.getElementById('inquiries-count-badge');
-      badge.innerText = appInquiries.length;
-
+      document.getElementById('inquiries-count-badge').innerText = appInquiries.length;
       const container = document.getElementById('admin-inquiries-list');
-      if (appInquiries.length === 0) {
-        container.innerHTML = `<div class="p-8 text-center text-slate-500 text-xs">لا توجد رسائل أو طلبات مسجلة حتى الآن.</div>`;
+
+      if(appInquiries.length === 0) {
+        container.innerHTML = `<div class="text-center py-8 text-xs text-slate-500">لا توجد رسائل مستلمة حتى الآن.</div>`;
         return;
       }
 
       container.innerHTML = appInquiries.map(inq => `
         <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
           <div class="flex items-center justify-between text-xs">
-            <span class="font-bold text-cyan-300">${inq.name} (${inq.phone})</span>
-            <span class="text-slate-500 font-mono">${inq.date}</span>
+            <span class="font-bold text-cyan-300">${inq.name} (<span dir="ltr" class="font-mono text-white">${inq.phone}</span>)</span>
+            <span class="text-slate-500 font-mono text-[11px]">${inq.date}</span>
           </div>
-          <div class="text-xs text-slate-300">
-            <strong>الخدمة:</strong> ${inq.service} | <strong>الباقة:</strong> ${inq.package}
+          <div class="flex flex-wrap gap-2 text-[11px]">
+            <span class="px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800">الخدمة: ${inq.service}</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">الباقة: ${inq.package}</span>
           </div>
-          ${inq.notes ? `<div class="text-xs text-slate-400 bg-slate-950 p-2 rounded-lg">ملاحظات: ${inq.notes}</div>` : ''}
-          <div class="pt-2 flex justify-end">
-            <a href="https://wa.me/${inq.phone.replace(/[^0-9]/g, '')}" target="_blank" class="px-3 py-1 rounded-lg bg-emerald-950 text-emerald-300 border border-emerald-500/30 text-xs font-bold flex items-center gap-1">
-              <i class="fa-brands fa-whatsapp"></i> فتح محادثة
-            </a>
-          </div>
+          ${inq.notes ? `<p class="text-xs text-slate-300 bg-slate-950 p-2.5 rounded-lg border border-slate-800 mt-1">${inq.notes}</p>` : ''}
         </div>
       `).join('');
     }
 
     function clearAllInquiries() {
-      if (!confirm('هل تريد مسح جميع سجلات الرسائل؟')) return;
+      if(!confirm('هل أنت تأكد من مسح جميع الرسائل بشكل نهائي؟')) return;
       appInquiries = [];
       setStoredData('sahly_inquiries', appInquiries);
       renderAdminInquiries();
       showToast('تم مسح سجل الرسائل.');
     }
 
+    /* Admin Social Logic */
     function loadSocialForm() {
       document.getElementById('social-input-tiktok').value = appSocial.tiktok;
       document.getElementById('social-input-youtube').value = appSocial.youtube;
@@ -1478,18 +1761,43 @@
         youtube: document.getElementById('social-input-youtube').value,
         instagram: document.getElementById('social-input-instagram').value,
         facebook: document.getElementById('social-input-facebook').value,
-        whatsapp: document.getElementById('social-input-whatsapp').value
+        whatsapp: document.getElementById('social-input-whatsapp').value.replace(/[^0-9]/g, '')
       };
       setStoredData('sahly_social', appSocial);
       updateSocialLinks();
-      showToast('تم تحديث جميع الروابط الرسمية بنجاح!');
+      showToast('تم حفظ وتحديث كافة الروابط وأرقام الواتساب!');
     }
 
+    function exportDataJSON() {
+      const fullData = {
+        hero: appHero,
+        services: appServices,
+        packages: appPackages,
+        calcTypes: appCalcTypes,
+        calcAddons: appCalcAddons,
+        whyUs: appWhyUs,
+        testimonials: appTestimonials,
+        social: appSocial
+      };
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(fullData, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", `sahlyweb_backup_${Date.now()}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+      showToast('تم تصدير نسخة احتياطية من البيانات!');
+    }
+
+    // Initialize Page Content
     document.addEventListener('DOMContentLoaded', () => {
+      renderHero();
+      renderServices();
       renderPackages();
+      renderCalculator();
+      renderWhyUs();
       renderTestimonials();
       updateSocialLinks();
-      document.getElementById('current-year').innerText = new Date().getFullYear();
     });
   </script>
 </body>
